@@ -1,12 +1,28 @@
-import Main from './main'
-import Header from './header'
+import MainSection from './main'
+import HeadSection from './head'
+import HeaderSection from './Landing Page/Header'
+import HomePageSection from './Landing Page/HomePage'
+import OurServicesSection from './Landing Page/OurServices'
+import WhyChooseUsSection from './Landing Page/WhyChooseUs'
+import OurPortfolioSection from './Landing Page/OurPortfolio'
+import TestimonialSection from './Landing Page/Testimonial'
+import ContactFormSection from './Landing Page/ContactForm'
+import FooterSection from './Landing Page/Footer'
 
 
 export default function Home() {
   return (
     <>
-        <Header />
-        <Main />
+        <HeadSection />
+        <HeaderSection />
+        <HomePageSection />
+        <OurServicesSection />
+        <WhyChooseUsSection />
+        <OurPortfolioSection />
+        <TestimonialSection />
+        <ContactFormSection />
+        <FooterSection />
+        <MainSection />
     </>
   )
 }
