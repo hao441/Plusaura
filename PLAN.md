@@ -7,8 +7,9 @@ The purpose of this project is to translate a figma landing page design into a n
 ## Features
 
 ### 🟡 CSS
-    🟡 Build Grid
-    🔴 Define basic CSS Rules
+    🟢 Build Grid
+    🟡 Import resources
+    🟡 Define basic CSS Rules
     🔴 Create classes for elements
 
 ### 🔴 TSX
