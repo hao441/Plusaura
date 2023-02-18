@@ -1,0 +1,6 @@
+
+.contact-grid {
+    display: grid;
+    grid-template-rows: 100vw;
+    grid-template-rows: 100%;
+}

@@ -33,31 +33,65 @@ body {
 
 h1 {
     font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 700;
+    font-size: 75px;
+}
+
+h2 {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
     font-weight: 400;
+    font-size: 36px;
+}
+
+h3 {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+}
+
+h4 {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+h5 {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+p {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+a {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 /* Class Styles */
 
-
 /* Grid */
 .main-grid {
     display: grid;
+    grid-template-rows: 100vw;
     grid-template-rows: 10vh 60vh 60vh 100vh 100vh 75vh 70vh 45vh;
 }
 
     .header {
         grid-row: 1;
-        background-color: blanchedalmond;
     }
 
     .homepage {
         grid-row: 2;
-        background-color: blanchedalmond;
     }
 
     .our-services{
-        grid-row: 3;
-        background-color:aq;
+        grid-row: 3;    
     }
 
     .why-choose-us {

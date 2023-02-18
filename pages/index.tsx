@@ -13,6 +13,7 @@ import FooterSection from './Landing Page/Footer'
 export default function Home() {
   return (
     <>
+      <div className='main-grid'>
         <HeadSection />
         <HeaderSection />
         <HomePageSection />
@@ -23,6 +24,7 @@ export default function Home() {
         <ContactFormSection />
         <FooterSection />
         <MainSection />
+      </div>
     </>
   )
 }
