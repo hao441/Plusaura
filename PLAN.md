@@ -8,13 +8,13 @@ The purpose of this project is to translate a figma landing page design into a n
 
 ### 🟡 CSS
     🟢 Build Grid
-    🟡 Import resources
-    🟡 Define basic CSS Rules
-    🔴 Create classes for elements
+    🟢 Import resources
+    🟢 Define basic CSS Rules
+    🟡 Create classes for elements
 
 ### 🟡 TSX
     🟢 Create components for each section
-    🟡 Populate the components with the given elements.
+    🟢 Populate the components with the given elements.
     🔴 Create animation with scrollmagic library
     🔴 Create forms and api calls to sendgrid account and relevant relays
     🔴 Create production build
