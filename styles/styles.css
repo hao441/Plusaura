@@ -29,6 +29,10 @@
 body {
     color: white;
     background-color: #09050D;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 h1 {
@@ -71,6 +75,10 @@ a {
     font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
     font-weight: 400;
     font-size: 16px;
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /* Class Styles */
@@ -115,4 +123,13 @@ a {
     }
 
 
+/* Other Global Classes */
 
+.get-in-touch-button {
+    width: 200px;
+    height: 44px;
+    background: linear-gradient(229.76deg, #00C2CB -61.91%, #00C2CB 34.74%, #2A45A3 97.61%);
+    border-style: none;
+    font-size: 16px;
+    color: white;
+}

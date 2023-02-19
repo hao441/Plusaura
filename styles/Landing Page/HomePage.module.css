@@ -1,5 +1,17 @@
-.header-grid {
+.homePageGrid {
     display: grid;
-    grid-template-rows: 100vw;
-    grid-template-rows: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+.headerText {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.headerImage {
+    justify-self: end;
 }

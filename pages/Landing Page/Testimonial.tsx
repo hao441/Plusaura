@@ -13,6 +13,7 @@ import person1 from '../../assets/testimonial/person/1.png';
 import person2 from '../../assets/testimonial/person/2.png';
 import person3 from '../../assets/testimonial/person/3.png';
 
+import styles from '../../styles/Landing Page/Testimonial.module.css'
 
 
 export default function TestimonialSection() {

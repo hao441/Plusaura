@@ -1,3 +1,5 @@
+import styles from '../../styles/Landing Page/Footer.module.css'
+
 export default function FooterSection() {
     return (
       <>

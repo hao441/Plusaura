@@ -6,6 +6,7 @@ import portfolio2 from '../../assets/our-portfolio/portfolio-2.png';
 import portfolio3 from '../../assets/our-portfolio/portfolio-3.png';
 import portfolio4 from '../../assets/our-portfolio/portfolio-4.png';
 
+import styles from '../../styles/Landing Page/OurPortfolio.module.css'
 
 export default function OurPortfolioSection() {
     return (
@@ -27,7 +28,7 @@ export default function OurPortfolioSection() {
             <div>
               <h5>Text Title Here</h5>
               <p>Sample Text</p>
-              <button>Get in Touch</button>
+              <button className='get-in-touch-button'>Get in Touch</button>
             </div>
           </div>
         </div>

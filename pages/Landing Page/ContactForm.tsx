@@ -1,7 +1,8 @@
 import Image from 'next/image'
-
-//images
 import contactImage from '../../assets/contact-us-image.png';
+
+import styles from '../../styles/Landing Page/ContactUs.module.css'
+
 
 export default function ContactFormSection() {
     return (
@@ -28,7 +29,7 @@ export default function ContactFormSection() {
             <div>
               <h4>Text Title</h4>
               <p>Paragraph Text</p>
-              <button>Get in Touch</button>
+              <button className='get-in-touch-button'>Get in Touch</button>
             </div>
           </div>
         </div>
