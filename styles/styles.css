@@ -87,7 +87,7 @@ a {
 .main-grid {
     display: grid;
     grid-template-rows: 100vw;
-    grid-template-rows: 10vh 60vh 60vh 100vh 100vh 75vh 70vh 45vh;
+    grid-template-rows: 10vh 60vh 70vh 100vh 120vh 85vh 90vh 55vh;
 }
 
     .header {
@@ -125,6 +125,16 @@ a {
 
 /* Other Global Classes */
 
+.pageTitle {
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    background: linear-gradient(246.01deg, #8AF2D0 -1.36%, #3B6FFC 118.64%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 10px;
+}
+
 .get-in-touch-button {
     width: 200px;
     height: 44px;
@@ -132,4 +142,52 @@ a {
     border-style: none;
     font-size: 16px;
     color: white;
+}
+
+/* Get in touch */
+
+.get-in-touch-box {
+    display: grid;
+    width: 90%;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    background-color: #18151B;
+    justify-content: stretch;
+    padding: 0;
+    margin: 0;
+}
+
+.get-in-touch-title {
+    margin: 20px;
+    margin-bottom: 0;
+}
+
+.get-in-touch-subtitle {
+    margin: 20px;
+    margin-top: 10px;
+    color: #9C9C9C;
+}
+
+.get-in-touch-button-box {
+    justify-self: flex-end;
+}
+.get-in-touch-button {
+    margin: 20px;
+}
+
+.margin-top {
+    margin-top: 50px;
+}
+
+.margin-bottom {
+    margin-bottom: 50px;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.center {
+    text-align: center;
 }

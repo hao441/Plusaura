@@ -6,7 +6,7 @@ import OurServicesSection from './Landing Page/OurServices'
 import WhyChooseUsSection from './Landing Page/WhyChooseUs'
 import OurPortfolioSection from './Landing Page/OurPortfolio'
 import TestimonialSection from './Landing Page/Testimonial'
-import ContactFormSection from './Landing Page/ContactForm'
+import ContactUsSection from './Landing Page/ContactUs'
 import FooterSection from './Landing Page/Footer'
 
 
@@ -21,9 +21,9 @@ export default function Home() {
         <WhyChooseUsSection />
         <OurPortfolioSection />
         <TestimonialSection />
-        <ContactFormSection />
+        <ContactUsSection />
         <FooterSection />
-        <MainSection />
+        {/* <MainSection /> */}
       </div>
     </>
   )

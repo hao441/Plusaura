@@ -21,45 +21,50 @@ export default function WhyChooseUsSection() {
 
             <div>
               <div>
-                <h5>Why Choose Us</h5>
-                <h3>Specialist in providing client best digital product of various services</h3>
+                <h5 className='pageTitle'>Why Choose Us</h5>
+                <h3 className={styles.chooseSubTitle}>Specialist in providing client best digital product of various services</h3>
               </div>
               
               <div className={styles.clientBoxes}>
-                <div className={styles.clientBox1}>
-                <Image src={boxImage1} alt={"image"} />
+                <div className={styles.clientBox}>
+                <Image className={styles.boxImage} src={boxImage1} alt={"image"} />
                 <div className={styles.clientText}>
-                    <h4>Focus on Client Problem</h4>
-                    <p>Work with small to large business willing to bring there brand to the next level with slick designs.</p>
+                    <h4 className={styles.clientTextTitle}>Focus on Client Problem</h4>
+                    <p className={styles.clientTextSubtitle}>Work with small to large business willing to bring there brand to the next level with slick designs.</p>
                   </div>
                 </div>
 
-                <div className={styles.clientBox2}>
-                <Image src={boxImage2} alt={"image"} />
+                <div className={styles.clientBox}>
+                <Image className={styles.boxImage} src={boxImage2} alt={"image"} />
                   <div className={styles.clientText}>
-                    <h4>Provide a Real Solution</h4>
-                    <p>Optimalise website for increasing sales, creating funnels to drive more sales.</p>
+                    <h4 className={styles.clientTextTitle}>Provide a Real Solution</h4>
+                    <p className={styles.clientTextSubtitle}>Optimalise website for increasing sales, creating funnels to drive more sales.</p>
                   </div>
                 </div>
 
-                <div className={styles.clientBox3}>
+                <div className={styles.clientBox}>
                   <div>
-                    <Image src={boxImage3} alt={"image"} />
+                    <Image className={styles.boxImage} src={boxImage3} alt={"image"} />
                   </div>
                   <div className={styles.clientText}>
-                    <h4>High Quality Service</h4>
-                    <p>We don’t work with more then a certain amount of business at one time to ensure the highest quality of work.</p>
+                    <h4 className={styles.clientTextTitle}>High Quality Service</h4>
+                    <p className={styles.clientTextSubtitle}>We don’t work with more then a certain amount of business at one time to ensure the highest quality of work.</p>
                   </div>
                 </div>
-              </div>
-
-              <div>
-                <h5>Text Title Here</h5>
-                <p>Sample Text</p>
-                <button className='get-in-touch-button'>Get in Touch</button>
               </div>
             </div>
           </div>
+
+
+            <div className='get-in-touch-box margin-auto'>
+              <div>
+                <h5 className='get-in-touch-title'>Text Title Here</h5>
+                <p className='get-in-touch-subtitle'>Lorem ipsum dolor sit amet consectetur. Dictum erat odio integer purus eget porta fermentum.</p>
+              </div>
+              <div className='get-in-touch-button-box'>
+                <button className='get-in-touch-button'>Get in Touch</button>
+              </div>
+            </div>        
         </div>
       </>
     )

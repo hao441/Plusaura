@@ -1,5 +1,44 @@
-.footer-grid {
+.footerGrid {
     display: grid;
-    grid-template-rows: 100vw;
-    grid-template-rows: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
 }
+
+.sectionHeader {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sectionText {
+    font-size: 14px;
+    font-weight: 300;
+    color: #9C9C9C;
+}
+
+.linkSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.formInput {
+    border: 1px solid #383639;
+    background-color: #28262A;;
+}
+
+.hr {
+    color: #3E4047;
+}
+
+.conditionSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.conditionsText {
+    font-size: 12px;
+    font-weight: 300;
+    color: #9C9C9C;
+}
+

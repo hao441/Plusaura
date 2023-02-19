@@ -18,39 +18,39 @@ export default function OurServicesSection() {
         <div className={styles.ourServicesGrid}>
           <div className='our-services-grid'>
             <div className={styles.serviceText}>
-              <h5>Our Services</h5>
-              <h3>Managing your Business with our Best Services</h3>
+              <h5 className='pageTitle center'>Our Services</h5>
+              <h3 className={styles.serviceTextSubtitle}>Managing your Business with our Best Services</h3>
             </div>
 
             <div className={styles.serviceGrid}>
-              <div className={styles.serviceBox1}>
+              <div className={styles.serviceBox}>
                 <Image src={service1} alt={"image"}/>
                 <p>Digital Marketing</p>
               </div>
-              <div className={styles.serviceBox2}>
+              <div className={styles.serviceBox}>
                 <Image src={service2} alt={"image"}/>
                 <p>App/Website Design</p>
               </div>
-              <div className={styles.serviceBox3}>
+              <div className={styles.serviceBox}>
                 <Image src={service3} alt={"image"}/>
                 <p>App/Website Development</p>
               </div>
-              <div className={styles.serviceBox4}>
+              <div className={styles.serviceBox}>
                 <Image src={service4} alt={"image"}/>
                 <p>Brand Design</p>
               </div>
-              <div className={styles.serviceBox5}>
+              <div className={styles.serviceBox}>
                 <Image src={service5} alt={"image"}/>
                 <p>Social Media Strategies</p>
               </div>
-              <div className={styles.serviceBox6}>
+              <div className={styles.serviceBox}>
                 <Image src={service6} alt={"image"}/>
                 <p>Product Consultation</p>
               </div>
             </div>
 
             <div className={styles.getInTouch}>
-              <p>Interested in knowing more details about our service? No problem</p>
+              <p className={styles.getInTouchText}>Interested in knowing more details about our service? No problem, just</p>
               <button className='get-in-touch-button'>Get in Touch</button>
             </div>
           </div>

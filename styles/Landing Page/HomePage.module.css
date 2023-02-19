@@ -15,3 +15,13 @@
 .headerImage {
     justify-self: end;
 }
+
+.ourServicesButton {
+    width: 200px;
+    height: 44px;
+    border: 1px solid #FFFFFF;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 16px;
+    margin-left: 10px;
+}

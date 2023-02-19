@@ -22,40 +22,72 @@ export default function TestimonialSection() {
         <div className="testimonial">
           <div className='testimonial-grid'>
             <div>
-              <h5>Testimonial</h5>
-              <h3>What they say about us</h3>
+              <h5 className='pageTitle center'>Testimonial</h5>
+              <h3 className='center'>What they say about us</h3>
             </div>
 
             <div>
-              <div>
-                <div>
+              <div className={styles.testimonialBoxes}>
+                <div className={styles.testimonialBox}>
+                  <div className={styles.testimonialImages}>
                   <Image src={companyLogo1} alt={"image"}/> {/*company logo*/}
                   <Image src={stars} alt={"image"}/> {/*stars*/}
-                  <p>Testimonial Text</p>
-                  <div>
-                    <Image src={person1} alt={"image"}/> {/*person picture */} 
-                    <p>name</p>
-                    <p>title</p>
                   </div>
+
+                  <div>
+                    <p className={styles.testimonialText}>Lorem ipsum dolor sit amet consectetur. Varius ipsum vel tortor dolor semper. Ullamcorper eget id diam lectus in vestibulum adipiscing netus. Id pellentesque volutpat duis volutpat est ac quis. </p>
+                  </div>
+                  
+                  <div className={styles.testimonialContactBox}>
+                    <div>
+                      <Image src={person1} alt={"image"}/> {/*person picture */} 
+                    </div>
+                    <div>
+                      <p className={styles.testimonialContactName}>Felix Watson</p>
+                      <p className={styles.testimonialContactTitle}>Engineering Manager at Gojek</p>
+                    </div>
+                  </div>
+
                 </div>
-                <div>
+                <div className={styles.testimonialBox}>
+
+                  <div>
                   <Image src={companyLogo2} alt={"image"}/> {/*company logo*/}
                   <Image src={stars} alt={"image"}/> {/*stars*/}
-                  <p>Testimonial Text</p>
+                  </div>
+
                   <div>
-                    <Image src={person2} alt={"image"}/> {/*person picture */}
-                    <p>name</p>
-                    <p>title</p>
+                  <p className={styles.testimonialText}>Lorem ipsum dolor sit amet consectetur. Varius ipsum vel tortor dolor semper. Ullamcorper eget id diam lectus in vestibulum adipiscing netus. Id pellentesque volutpat duis volutpat est ac quis. </p>
+                  </div>
+                  
+                  <div className={styles.testimonialContactBox}>
+                    <div>
+                      <Image src={person2} alt={"image"}/> {/*person picture */} 
+                    </div>
+                    <div>
+                      <p className={styles.testimonialContactName}>Selly Natalia</p>
+                      <p className={styles.testimonialContactTitle}>Senior UX Writer at Tokopedia</p>
+                    </div>
                   </div>
                 </div>
-                <div>
+                <div className={styles.testimonialBox}>
+                  <div>
                   <Image src={companyLogo3} alt={"image"}/> {/*company logo*/}
                   <Image src={stars} alt={"image"}/> {/*stars*/}
-                  <p>Testimonial Text</p>
+                  </div>
+
                   <div>
-                    <Image src={person3} alt={"image"}/> {/*person picture */}
-                    <p>name</p>
-                    <p>title</p>
+                    <p className={styles.testimonialText}>Lorem ipsum dolor sit amet consectetur. Varius ipsum vel tortor dolor semper. Ullamcorper eget id diam lectus in vestibulum adipiscing netus. Id pellentesque volutpat duis volutpat est ac quis. </p>
+                  </div>
+                  
+                  <div className={styles.testimonialContactBox}>
+                    <div>
+                      <Image src={person3} alt={"image"}/> {/*person picture */} 
+                    </div>
+                    <div>
+                      <p className={styles.testimonialContactName}>Guy Hawkins</p>
+                      <p className={styles.testimonialContactTitle}>Digital Marketer Expert at Amazon</p>
+                    </div>
                   </div>
                 </div>
               </div>

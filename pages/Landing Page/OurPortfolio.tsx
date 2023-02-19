@@ -14,21 +14,25 @@ export default function OurPortfolioSection() {
        <div className="our-portfolio">
           <div className='our-portfolio-grid'>
             <div>
-              <h5>Our Portfolio</h5>
-              <h3>Plusaura Latest Portfolio</h3>
+              <h5 className='pageTitle center'>Our Portfolio</h5>
+              <h3 className={styles.pageSubTitle}>Plusaura Latest Portfolio</h3>
             </div>
 
-            <div>
+            <div className={styles.portfolioGrid}>
               <Image src={portfolio1} alt={"image"}/>
               <Image src={portfolio2} alt={"image"}/>
               <Image src={portfolio3} alt={"image"}/>
               <Image src={portfolio4} alt={"image"}/>
             </div>
 
-            <div>
-              <h5>Text Title Here</h5>
-              <p>Sample Text</p>
-              <button className='get-in-touch-button'>Get in Touch</button>
+            <div className='get-in-touch-box margin-top margin-auto margin-bottom '>
+              <div>
+                <h5 className='get-in-touch-title'>Text Title Here</h5>
+                <p className='get-in-touch-subtitle'>Sample Text</p>
+              </div>
+              <div>
+                <button className='get-in-touch-button'>Get in Touch</button>
+              </div>
             </div>
           </div>
         </div>
