@@ -14,7 +14,7 @@ export default function ContactFormSection() {
             </div>
             <div className={styles.contactForm}>
               <div>
-                <h3 className={styles.contactFormTitle}>Let's Talk</h3>
+                <h3 className={styles.contactFormTitle}>Let&apos;s Talk</h3>
                 <p className={styles.contactFormSubtitle}>Lorem ipsum dolor sit amet consectetur. Ut non pellentesque lacinia convallis vitae.</p>
               </div>
               <div>
