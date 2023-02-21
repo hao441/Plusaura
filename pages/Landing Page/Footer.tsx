@@ -7,10 +7,11 @@ export default function FooterSection() {
     return (
       <>
           <div className="footer">
+            <div className={styles.footerBox}>
             <div className={styles.footerGrid}>
               <div>
-                <Image src={logo} alt="image" height={40} width={105}/>
-                <p className={styles.sectionText}>Text underneath Logo</p>
+                <Image src={logo} alt="image" height={31.38} width={105.4}/>
+                <p className={styles.logoText}>Lorem ipsum dolor sit amet consectetur. Vestibulum posuere nec leo eu. Ipsum consequat dui turpis velit suspendisse. </p>
               </div>
 
               <div>
@@ -24,21 +25,28 @@ export default function FooterSection() {
                 </div>
               </div>
 
-              <div>
+              <div className={styles.subscribeSection}>
                 <p className={styles.sectionHeader}>Subscribe Newsletter</p>
                 <p className={styles.sectionText}>Newletter Paragraph Text</p>
 
                 <form>
-                  <input id="subscription-email-field" type={"email"} />
-                  <button>Subscribe</button>
-                </form>
+                  <input id="subscription-email-field" className={styles.subscribeInput} type={"email"} />
+                  <button className={styles.subscribeButton}>Subscribe</button>
+                </form> 
               </div>
-                <hr className={styles.hr}/>
+              </div>
+              
+              <hr className={styles.hr}/>
 
               <div className={styles.conditionSection}>
-                <p className={styles.conditionsText}> Copyright 2022 Plusaura ...</p>
-                <p className={styles.conditionsText}>Terms and Conditions</p>
-                <p className={styles.conditionsText}>Privacy Policy</p>
+                <div>
+                  <p className={styles.conditionsText}> Copyright 2022 Plusaura ...</p>
+                </div>
+                <div></div>
+                <div className={styles.termsPolicy}>
+                  <p className={styles.conditionsText}>Terms and Conditions</p>
+                  <p className={styles.conditionsText}>Privacy Policy</p>
+                </div>
               </div>
             </div>
           </div>

@@ -13,15 +13,15 @@ import styles from '../../styles/Landing Page/WhyChooseUs.module.css'
 export default function WhyChooseUsSection() {
     return (
       <>
-        <div className="why-choose-us">
+        <div className="why-choose-us mobile-hide">
           <div className={styles.whyChooseUsGrid}>
-            <div>
-              <Image src={chooseImage} alt={"image"} />
+            <div className={styles.chooseImage}>
+              <Image className={styles.chooseImage} src={chooseImage} alt={"image"} />
             </div>
 
             <div>
               <div>
-                <h5 className='pageTitle'>Why Choose Us</h5>
+                <h5 className={styles.chooseTitle}>Why Choose Us</h5>
                 <h3 className={styles.chooseSubTitle}>Specialist in providing client best digital product of various services</h3>
               </div>
               

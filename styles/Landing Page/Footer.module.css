@@ -1,6 +1,12 @@
+.footerBox {
+    background-color: #211F24;
+    padding: 100px;
+}
+
+
 .footerGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1.5fr;
     grid-template-rows: 1fr;
 }
 
@@ -15,19 +21,50 @@
     color: #9C9C9C;
 }
 
+.logoText {
+    font-size: 14px;
+    font-weight: 300;
+    color: #9C9C9C;
+    width: 50%;
+}
+
 .linkSection {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 }
 
+.subscribeSection {
+    justify-self: end;
+}
+
+.subscribeInput {
+    width: 293px;
+    height: 44px;
+    color: white;
+    font-size: 16px;
+background: #28262A;
+border: 1px solid #383639;
+}
+
+.subscribeButton {
+    width: 140px;
+    height: 47px;
+    border-style: none;
+    color: white;
+    font-size: 16px;
+    background: linear-gradient(229.76deg, #00C2CB -61.91%, #00C2CB 34.74%, #2A45A3 97.61%);
+    margin: 0;
+}
+
 .formInput {
     border: 1px solid #383639;
-    background-color: #28262A;;
+    background-color: #28262A;
 }
 
 .hr {
-    color: #3E4047;
+    opacity: 0.2;
+
 }
 
 .conditionSection {
@@ -40,5 +77,14 @@
     font-size: 12px;
     font-weight: 300;
     color: #9C9C9C;
+}
+
+.termsPolicy {
+    display: grid;
+    width: 217px;
+    grid-template-columns:  1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: end;
+    justify-self: end;
 }
 

@@ -1,27 +1,38 @@
 .homePageGrid {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
     align-items: center;
 }
 
-.headerText {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 1;
-}
+
 
 .headerImage {
     justify-self: end;
+    
 }
+
+.digitalProduct {
+    font-weight: 700;
+font-size: 78px;
+line-height: 140%;
+/* or 109px */
+
+background: linear-gradient(80.48deg, #3E6BFE 6.36%, #00C2CB 50.5%, #98F7D0 94.63%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+
+}
+
 
 .ourServicesButton {
     width: 200px;
     height: 44px;
     border: 1px solid #FFFFFF;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.0);
     color: white;
     font-size: 16px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
+

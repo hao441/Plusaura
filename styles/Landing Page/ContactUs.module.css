@@ -42,15 +42,41 @@
         color: #5A5A5A;
     }
 
+    .messageInput {
+        border: 1px solid #2B272E;
+        background-color: #1C1A1F;
+        font-size: 16px;
+        color: white;
+        padding: 0px 20px 100px 20px;
+    }
+
+    .messageInput::placeholder {
+        color: #5A5A5A;
+    }
+
     .checkBoxGroup {
         display: grid;
-        grid-template-columns: 1fr 10fr;
+        grid-template-columns: 1fr 20fr;
         grid-template-rows: 1fr;
         align-content: center;
+    }
+
+    .checkBox {
+        width: 20px;
+        height: 20px;
     }
 
     .checkBoxText {
         margin: 0 0 20px 0;
         padding: 0;
+        color: #9C9C9C;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 150%;
+        align-self: flex-start;
     }
 
+    .contactImage {
+        width: 40vw;
+        height: 60vh
+    }

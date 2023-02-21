@@ -5,15 +5,42 @@
     justify-items: center;
 }
 
-.chooseSubTitle {
-    width: 570px;
+.chooseImage {
+    justify-self: start;
 }
 
+.chooseTitle {
+    width: 140px;
+    height: 30px;
+
+    font-family: 'Neue Haas Grotesk Display Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    background: linear-gradient(246.01deg, #8AF2D0 -1.36%, #3B6FFC 118.64%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    padding: 0;
+}
+
+.chooseImage {
+    width: 50vw;
+    height: 70vh;
+}
+
+
 .clientBoxes {
-    width: 80%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 10px;
 }
 
 .clientBox {
@@ -27,6 +54,8 @@
     width: 72px;
     height: 72px;
     margin-bottom: 60px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .clientTextTitle {

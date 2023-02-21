@@ -19,10 +19,10 @@ import styles from '../../styles/Landing Page/Testimonial.module.css'
 export default function TestimonialSection() {
     return (
       <>
-        <div className="testimonial">
+        <div className="testimonial mobile-hide">
           <div className='testimonial-grid'>
             <div>
-              <h5 className='pageTitle center'>Testimonial</h5>
+              <h5 className={styles.testimonialTitle}>Testimonial</h5>
               <h3 className='center'>What they say about us</h3>
             </div>
 
@@ -40,7 +40,7 @@ export default function TestimonialSection() {
                   
                   <div className={styles.testimonialContactBox}>
                     <div>
-                      <Image src={person1} alt={"image"}/> {/*person picture */} 
+                      <Image className={styles.testimonialImage} src={person1} alt={"image"}/> {/*person picture */} 
                     </div>
                     <div>
                       <p className={styles.testimonialContactName}>Felix Watson</p>
@@ -62,7 +62,7 @@ export default function TestimonialSection() {
                   
                   <div className={styles.testimonialContactBox}>
                     <div>
-                      <Image src={person2} alt={"image"}/> {/*person picture */} 
+                      <Image className={styles.testimonialImage} src={person2} alt={"image"}/> {/*person picture */} 
                     </div>
                     <div>
                       <p className={styles.testimonialContactName}>Selly Natalia</p>
@@ -82,7 +82,7 @@ export default function TestimonialSection() {
                   
                   <div className={styles.testimonialContactBox}>
                     <div>
-                      <Image src={person3} alt={"image"}/> {/*person picture */} 
+                      <Image className={styles.testimonialImage} src={person3} alt={"image"}/> {/*person picture */} 
                     </div>
                     <div>
                       <p className={styles.testimonialContactName}>Guy Hawkins</p>

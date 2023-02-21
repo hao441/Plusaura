@@ -9,10 +9,23 @@ import TestimonialSection from './Landing Page/Testimonial'
 import ContactUsSection from './Landing Page/ContactUs'
 import FooterSection from './Landing Page/Footer'
 
+import Image from 'next/image'
+import logo from '../assets/logo.png';
+import darkMode from '../assets/dark-mode.png'
+
+import styles from '../styles/Landing Page/Header.module.css';
+import { useState } from 'react'
 
 export default function Home() {
+
+  const MobileMenu = useState(false)
+
   return (
     <>
+
+
+
+      
       <div className='main-grid'>
         <HeadSection />
         <HeaderSection />

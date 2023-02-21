@@ -1,8 +1,7 @@
 .headerGrid {
     display: grid;
-    grid-template-columns: 25% 75%;
-    grid-template-rows: 50%;
-    align-items: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 .image {
@@ -10,14 +9,24 @@
 }
 
 .navbar {
-    grid-column: 2;
-    grid-row: 1;
+    grid-column: 1fr;
+    grid-row: 1fr;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-self: center;
+}
+
+.darkTouch {
+    justify-self: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     align-items: center;
 }
 
 .dlMode {
+    justify-self: end;
     margin-right: 30px;
     margin-left: 30px;
 }
@@ -29,4 +38,25 @@
     border-style: none;
     font-size: 16px;
     color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .headerGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+    }
+
+    .navbar {
+        display: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .headerButton {
+        display: none;
+    }
 }

@@ -6,6 +6,28 @@
     justify-items: center;
 }
 
+.testimonialTitle {
+    width: 140px;
+    height: 30px;
+
+    font-family: 'Neue Haas Grotesk Display Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    background: linear-gradient(246.01deg, #8AF2D0 -1.36%, #3B6FFC 118.64%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+}
+
 .testimonialBoxes {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -36,6 +58,10 @@
         line-height: 150%;
         letter-spacing: 0.02em;
         
+    }
+
+    .testimonialImage {
+        margin-right: 10px;
     }
 
     .testimonialContactName {
