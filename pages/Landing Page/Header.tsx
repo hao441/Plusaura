@@ -26,7 +26,7 @@ export default function HeaderSection() {
                 <button className={styles.headerButton}>Get in Touch</button>
               </div>
             </div>
-            <body className='nav-body'>
+            {/* <body className='nav-body'>
               <nav>
                 <div className="navbar">
                   <div className="container nav-container">
@@ -64,7 +64,7 @@ export default function HeaderSection() {
                   </div>
                 </div>
               </nav>
-            </body>
+            </body> */}
           
         </div>
       </>
