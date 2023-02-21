@@ -24,15 +24,33 @@
     font-weight: 700;
 }
 
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
 
 /* Tag Styles */
-body {
+.light {
     color: white;
     background-color: #09050D;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.dark {
+  color: #09050D;
+  background-color: white;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 h1 {
@@ -86,7 +104,6 @@ a {
 /* Grid */
 .main-grid {
     display: grid;
-    grid-template-rows: 10vh 60vh 70vh 100vh 120vh 85vh 90vh 55vh;
     grid-template-rows: 0.1fr 0.7fr 0.9fr 1.1fr 1.4fr 0.85fr 0.9fr 0.55fr;
     
     
@@ -127,6 +144,23 @@ a {
 
 /* Other Global Classes */
 
+.pop-off {
+  display: none;
+}
+
+.pop-on {
+  display: block;
+}
+
+.pop-up {
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  height: 500px;
+  width: 1000px;
+  background-color: white;
+}
+
 .navbar {
     grid-column: 1fr;
     grid-row: 1fr;
@@ -137,12 +171,6 @@ a {
 }
 
 .header-grid-main {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr;
-}
-
-.header-grid {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr;
@@ -230,12 +258,14 @@ a {
   margin-right: 10px;
 }
 
+
+
 @media only screen and (max-width: 1000px) {
 
   body {
     margin: 0;
-    padding: 0;
-    max-width: 98vw;
+    padding:0;
+    margin: 1.5vh 3vw 1.5px 3vw
   }
 
 
@@ -254,6 +284,14 @@ a {
 
     .header-grid-main {
       display: none;
+    }
+
+    .header-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      align-items: center;
+      margin-top: 12px;
     }
     
     .container {
@@ -327,7 +365,7 @@ a {
       height: 4px;
       width: 100%;
       border-radius: 10px;
-      background: #0e2431;
+      background: white;
       
     }
     
@@ -347,7 +385,7 @@ a {
     
     .navbar .menu-items {
       padding-top: 120px;
-      background-color: gray;
+      background-color: #18151B;
       transform: translate(-300%);
       display: flex;
       flex-direction: column;
@@ -364,6 +402,24 @@ a {
       margin-bottom: 1.2rem;
       font-size: 1.5rem;
       font-weight: 500;
+      margin: 10px 10px 10px 50px;
+
+      text-align: start;
+    }
+
+    .navbar .menu-items li a {
+      color: white;
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+      text-align: start;
+    }
+
+    .navbar .menu-hr {
+      width: 90%;
+      margin: 0 auto 0 auto;
+      border-width: 0.5px;
+      border-color: #0e2431;
     }
     
     .logo {

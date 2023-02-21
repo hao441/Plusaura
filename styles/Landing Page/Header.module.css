@@ -31,6 +31,10 @@
     margin-left: 30px;
 }
 
+.hamburgerLines {
+    display: none
+}
+
 .headerButton {
     width: 160px;
     height: 44px;
@@ -42,21 +46,40 @@
 
 @media only screen and (max-width: 1000px) {
 
-    .headerGrid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        align-items: center;
-    }
+
 
     .navbar {
         display: none;
         margin: 0;
         padding: 0;
-        width: 100%;
     }
 
     .headerButton {
         display: none;
     }
+
+    .darkTouch {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .dlMode {
+        padding: 0;
+        justify-self: end;
+    }
+
+    .headerButtonMobile {
+        width: 160px;
+        height: 44px;
+        background: linear-gradient(229.76deg, #00C2CB -61.91%, #00C2CB 34.74%, #2A45A3 97.61%);
+        border-style: none;
+        font-size: 16px;
+        color: white;
+        margin: 50px auto;
+    }
+
+   
 }

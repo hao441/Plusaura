@@ -18,7 +18,7 @@ export default function ContactFormSection() {
                 <p className={styles.contactFormSubtitle}>Lorem ipsum dolor sit amet consectetur. Ut non pellentesque lacinia convallis vitae.</p>
               </div>
               <div>
-                <form className={styles.formElements}>
+                <form id='contact-form' className={styles.formElements}>
                   <input id="name" className={styles.formInput} type={"text"} name={"name"} placeholder={"Enter your name"}/>
                   <input id="email" className={styles.formInput} type={"text"} name={"email"} placeholder={"Enter your email"}/>
                   <input id="message" className={styles.messageInput} type={"text"} name={"message"} placeholder={"Enter your message"}/>

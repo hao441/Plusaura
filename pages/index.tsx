@@ -8,18 +8,41 @@ import OurPortfolioSection from './Landing Page/OurPortfolio'
 import TestimonialSection from './Landing Page/Testimonial'
 import ContactUsSection from './Landing Page/ContactUs'
 import FooterSection from './Landing Page/Footer'
+import PopUp from './Landing Page/PopUp'
+
+import type { AppProps } from 'next/app'
+
+import styles from '../styles/Landing Page/ContactUs.module.css'
 
 import { useState } from 'react'
 
+
 export default function Home() {
 
-  const MobileMenu = useState(false)
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const [mode, setMode] = useState('dark');
+  const [contactMenu, setContactMenu] = useState(false)
 
   return (
     <>
+    
+    <div className={mode === 'dark' ? 'dark' : 'light'}>
+      <div className={!contactMenu ? 'pop-off' : 'pop-on'}>
+        <PopUp
+          newContactState={setContactMenu}
+          />
+      </div>
       <div className='main-grid'>
         <HeadSection />
-        <HeaderSection />
+        
+        <HeaderSection
+        currentMobileState={mobileMenu}
+        newMobileState={setMobileMenu}
+        currentModeState={mode}
+        newModeState={setMode}
+        currentContactState={contactMenu}
+        newContactState={setContactMenu}
+        />
         <HomePageSection />
         <OurServicesSection />
         <WhyChooseUsSection />
@@ -28,6 +51,7 @@ export default function Home() {
         <ContactUsSection />
         <FooterSection />
         {/* <MainSection /> */}
+      </div>
       </div>
     </>
   )
