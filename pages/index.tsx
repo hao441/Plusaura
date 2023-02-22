@@ -27,13 +27,12 @@ export default function Home() {
     <>
     <div className={mode === 'dark' ? 'dark' : 'light'}>
       <div className={!contactMenu ? 'pop-off' : 'pop-on'}>
-        <PopUp 
+        <PopUp
           currentContactState={contactMenu}
           newContactState={setContactMenu}
           currentModeState={mode}
         />
       </div>
-      <div className='main-grid'>
         <HeadSection />
         <HeaderSection
           currentMobileState={mobileMenu}
@@ -71,7 +70,6 @@ export default function Home() {
         />
         <FooterSection currentModeState={mode}/>
         {/* <MainSection /> */}
-      </div>
       </div>
     </>
   )

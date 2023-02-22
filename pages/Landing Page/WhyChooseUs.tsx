@@ -37,7 +37,7 @@ export default function WhyChooseUsSection({currentModeState, currentContactStat
               <Image className={styles.chooseImage} src={chooseImage} alt={"image"} />
             </div>
 
-            <div>
+            <div className={styles.marginBottom}>
               <div>
                 <h5 className={styles.chooseTitle}>Why Choose Us</h5>
                 <h3 className={styles.chooseSubTitle}>Specialist in providing client best digital product of various services</h3>

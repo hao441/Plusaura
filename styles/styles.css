@@ -38,8 +38,8 @@ body {
 .light {
   color: #09050D;
   background-color: white;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
   padding-left: 5vw;
   padding-right: 5vw;
   transition: background-color 0.5s ease;
@@ -48,8 +48,8 @@ body {
 .dark {
     color: white;
     background-color: #09050D;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
     padding-left: 5vw;
     padding-right: 5vw;
     transition: background-color 0.5s ease;
@@ -116,42 +116,37 @@ a {
 /* Class Styles */
 
 /* Grid */
-.main-grid {
-    display: grid;
-    grid-template-rows: 0.1fr 0.7fr 0.9fr 1.1fr 1.4fr 0.85fr 0.9fr 0.55fr;
-    
-}
 
     .header {
-        grid-row: 1;
+        margin-bottom: 10vh;
     }
 
     .homepage {
-        grid-row: 2;
+        margin-bottom: 10vh;
     }
 
     .our-services{
-        grid-row: 3;    
+        margin-bottom: 10vh;
     }
 
     .why-choose-us {
-        grid-row: 4;
+        margin-bottom: 10vh;
     }
 
     .our-portfolio {
-        grid-row: 5;
+        margin-bottom: 10vh;
     }
 
     .testimonial {
-        grid-row: 6;
+        margin-bottom: 10vh;
     }
 
     .contact-form {
-        grid-row: 7;
+        margin-bottom: 10vh;
     }
 
     .footer {
-        grid-row: 8;
+        margin-bottom: 10vh;
     }
 
 
@@ -203,7 +198,7 @@ a {
 
 .header-grid-main {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: 1fr;
 }
 
@@ -301,13 +296,39 @@ a {
 }
 
 
-
-@media only screen and (max-width: 1000px) {
+/* Table/iPad CSS */
+@media only screen and (max-width: 1050px) {
 
   body {
     margin: 0;
     padding:0;
     margin: 1.5vh 3vw 1.5px 3vw
+  }
+
+  .get-in-touch-box-light {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    text-align: center;
+    background-color: #F6F6F6;
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+  .get-in-touch-box-dark {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    background-color: #18151B;
+    padding: 0;
+    margin: 0;
+  }
+
+  .get-in-touch-button-box {
+    justify-self: center;
   }
 
 
@@ -494,4 +515,40 @@ a {
     }
 
 }
+
+
+@media only screen and (max-width: 350px) {
+  .header {
+    margin-bottom: 25vh;
+}
+
+.homepage {
+    margin-bottom: 25vh;
+}
+
+.our-services{
+    margin-bottom: 25vh;
+}
+
+.why-choose-us {
+    margin-bottom: 25vh;
+}
+
+.our-portfolio {
+    margin-bottom: 25vh;
+}
+
+.testimonial {
+    margin-bottom: 25vh;
+}
+
+.contact-form {
+    margin-bottom: 25vh;
+}
+
+.footer {
+    margin-bottom: 25vh;
+}
+}
+
 

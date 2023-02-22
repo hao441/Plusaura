@@ -31,10 +31,10 @@ export default function OurPortfolioSection({currentModeState, currentContactSta
             </div>
 
             <div className={styles.portfolioGrid}>
-              <Image src={portfolio1} alt={"image"}/>
-              <Image src={portfolio2} alt={"image"}/>
-              <Image src={portfolio3} alt={"image"}/>
-              <Image src={portfolio4} alt={"image"}/>
+              <Image className={styles.portfolioImage1} src={portfolio1} alt={"image"}/>
+              <Image className={styles.portfolioImage2} src={portfolio2} alt={"image"}/>
+              <Image className={styles.portfolioImage3} src={portfolio3} alt={"image"}/>
+              <Image className={styles.portfolioImage4} src={portfolio4} alt={"image"}/>
             </div>
 
             <div className={currentModeState === 'light' ? 'get-in-touch-box-light margin-top' : 'get-in-touch-box-dark margin-top'}>

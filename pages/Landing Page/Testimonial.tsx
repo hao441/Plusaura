@@ -31,17 +31,17 @@ export default function TestimonialSection({currentModeState}:ModeState) {
       <>
         <div className="testimonial mobile-hide">
           <div className='testimonial-grid'>
-            <div>
+            <div className={styles.testimonialTitleBox}>
               <h5 className={styles.testimonialTitle}>Testimonial</h5>
-              <h3 className='center'>What they say about us</h3>
+              <h3 className={styles.testimonialSubtitle}>What they say about us</h3>
             </div>
 
             <div>
               <div className={styles.testimonialBoxes}>
                 <div className={currentModeState === 'light' ? styles.testimonialBoxLight : styles.testimonialBoxDark}>
                   <div className={styles.testimonialImages}>
-                  <Image src={currentModeState === 'light' ? companyLogoLight1 : companyLogoDark1} alt={"image"}/> {/*company logo*/}
-                  <Image src={stars} alt={"image"}/> {/*stars*/}
+                    <Image className={styles.companyLogo} src={currentModeState === 'light' ? companyLogoLight1 : companyLogoDark1} alt={"image"}/> {/*company logo*/}
+                    <Image className={styles.starsImage} src={stars} alt={"image"}/> {/*stars*/}
                   </div>
 
                   <div>
@@ -61,9 +61,9 @@ export default function TestimonialSection({currentModeState}:ModeState) {
                 </div>
                 <div className={currentModeState === 'light' ? styles.testimonialBoxLight : styles.testimonialBoxDark}>
 
-                  <div>
+                  <div className={styles.testimonialImages}>
                   <Image src={companyLogo2} alt={"image"}/> {/*company logo*/}
-                  <Image src={stars} alt={"image"}/> {/*stars*/}
+                  <Image className={styles.starsImage} src={stars} alt={"image"}/> {/*stars*/}
                   </div>
 
                   <div>
@@ -81,9 +81,9 @@ export default function TestimonialSection({currentModeState}:ModeState) {
                   </div>
                 </div>
                 <div className={currentModeState === 'light' ? styles.testimonialBoxLight : styles.testimonialBoxDark}>
-                  <div>
+                  <div className={styles.testimonialImages}>
                   <Image src={currentModeState === 'light' ? companyLogoLight3 : companyLogoDark3} alt={"image"}/> {/*company logo*/}
-                  <Image src={stars} alt={"image"}/> {/*stars*/}
+                  <Image className={styles.starsImage} src={stars} alt={"image"}/> {/*stars*/}
                   </div>
 
                   <div>

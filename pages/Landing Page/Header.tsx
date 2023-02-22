@@ -37,7 +37,7 @@ export default function HeaderSection({ currentMobileState, newMobileState, curr
     return (
       <>
         <div className="header">
-          <div className='header-grid-main'>
+          <div className='header-grid-main'> 
               <div className={styles.image}>
                 <Image className={styles.logo} src={currentModeState === 'light' ? logoDark : logo} alt="image" height={31.38} width={105.4}/>
               </div>
