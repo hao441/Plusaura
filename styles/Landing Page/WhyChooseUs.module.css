@@ -76,7 +76,7 @@
 @media only screen and (max-width: 5000px) {
     .chooseImage {
         width: 35vw;
-        height: 43vh;   
+        height: 45vh;   
     }
 }
 
@@ -84,7 +84,7 @@
 @media only screen and (max-width: 2000px) {
     .chooseImage {
         width: 40vw;
-        height: 34vh;   
+        height: 65vh;   
     }
 }
 
@@ -92,7 +92,7 @@
 @media only screen and (max-width: 1500px) and (min-height: 2000px) {
     .chooseImage {
         width: 45vw;
-        height: 28vh;   
+        height: 50vh;   
     }
 }
 
@@ -175,30 +175,6 @@
 
    
 }
-
-
-
-/* 
-@media only screen and (max-width: 1750px) {
-    .chooseImage {
-        width: 40vw;
-        height: 34vh;
-    }
-}
-
-@media only screen and (max-width: 1400px) {
-    .chooseImage {
-        width: 40vw;
-        height: 40vw;
-    }
-}
-
-@media only screen and (max-width: 1300px) {
-    .chooseImage {
-        width: 40vw;
-        height: 100vh;
-    }
-} */
 
 
 
