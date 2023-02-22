@@ -4,9 +4,10 @@ import styles from '../../styles/Landing Page/ContactUs.module.css'
 
 interface CancelProp {
     newContactState: React.Dispatch<React.SetStateAction<boolean>>;
+    currentModeState: string;
   }
 
-export default function PopUp({ newContactState }: CancelProp) {
+export default function PopUp({ newContactState, currentModeState }: CancelProp) {
 
     const [fullname, setFullname] = useState('fads');
     const [email, setEmail] = useState('gordonchalice@gmail.com');
@@ -47,17 +48,17 @@ export default function PopUp({ newContactState }: CancelProp) {
     }
 
     return (
-    <div className='pop-up'>
-      <div className={styles.contactForm}>
+    <div id='pop-up' className='pop-up'>
+      <div className={currentModeState === 'light' ? styles.contactFormLight : styles.contactFormDark}>
               <div>
                 <h3 className={styles.contactFormTitle}>Let&apos;s Talk</h3>
                 <p className={styles.contactFormSubtitle}>Lorem ipsum dolor sit amet consectetur. Ut non pellentesque lacinia convallis vitae.</p>
               </div>
               <div>
                 <form id='contact-form' className={styles.formElements} onSubmit={sendEmail}>
-                  <input id="name" value={fullname} onChange={(e) => setFullname(e.target.value)} className={styles.formInput} type={"text"} name={"name"} placeholder={"Enter your name"} required/>
-                  <input id="email" value={email} onChange={(e) => setEmail(e.target.value)} className={styles.formInput} type={"email"} name={"email"} placeholder={"Enter your email"} required/>
-                  <input id="message" value={message} onChange={(e) => setMessage(e.target.value)} className={styles.messageInput} type={"text"} name={"message"} placeholder={"Enter your message"}/>
+                  <input id="name" value={fullname} onChange={(e) => setFullname(e.target.value)} className={currentModeState === 'light' ? styles.formInputLight : styles.formInputDark} type={"text"} name={"name"} placeholder={"Enter your name"} required/>
+                  <input id="email" value={email} onChange={(e) => setEmail(e.target.value)} className={currentModeState === 'light' ? styles.formInputLight : styles.formInputDark} type={"email"} name={"email"} placeholder={"Enter your email"} required/>
+                  <input id="message" value={message} onChange={(e) => setMessage(e.target.value)} className={currentModeState === 'light' ? styles.formInputLight : styles.formInputDark} type={"text"} name={"message"} placeholder={"Enter your message"}/>
                   <div>
                   
                     <div className={styles.checkBoxGroup}>

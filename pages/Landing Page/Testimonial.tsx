@@ -4,9 +4,15 @@ import Image from 'next/image'
 import stars from '../../assets/testimonial/stars.png';
 
 //company logos
-import companyLogo1 from '../../assets/testimonial/company-logo/logo-1.png';
 import companyLogo2 from '../../assets/testimonial/company-logo/logo-2.png';
-import companyLogo3 from '../../assets/testimonial/company-logo/logo-3.png';
+
+    //light
+    import companyLogoLight1 from '../../assets/testimonial/company-logo/light/1.png';
+    import companyLogoLight3 from '../../assets/testimonial/company-logo/light/3.png';
+
+    //dark
+    import companyLogoDark1 from '../../assets/testimonial/company-logo/dark/1.png';
+    import companyLogoDark3 from '../../assets/testimonial/company-logo/dark/3.png';
 
 //person
 import person1 from '../../assets/testimonial/person/1.png';
@@ -15,8 +21,12 @@ import person3 from '../../assets/testimonial/person/3.png';
 
 import styles from '../../styles/Landing Page/Testimonial.module.css'
 
+interface ModeState {
+  currentModeState: string;
+}
 
-export default function TestimonialSection() {
+
+export default function TestimonialSection({currentModeState}:ModeState) {
     return (
       <>
         <div className="testimonial mobile-hide">
@@ -28,9 +38,9 @@ export default function TestimonialSection() {
 
             <div>
               <div className={styles.testimonialBoxes}>
-                <div className={styles.testimonialBox}>
+                <div className={currentModeState === 'light' ? styles.testimonialBoxLight : styles.testimonialBoxDark}>
                   <div className={styles.testimonialImages}>
-                  <Image src={companyLogo1} alt={"image"}/> {/*company logo*/}
+                  <Image src={currentModeState === 'light' ? companyLogoLight1 : companyLogoDark1} alt={"image"}/> {/*company logo*/}
                   <Image src={stars} alt={"image"}/> {/*stars*/}
                   </div>
 
@@ -49,7 +59,7 @@ export default function TestimonialSection() {
                   </div>
 
                 </div>
-                <div className={styles.testimonialBox}>
+                <div className={currentModeState === 'light' ? styles.testimonialBoxLight : styles.testimonialBoxDark}>
 
                   <div>
                   <Image src={companyLogo2} alt={"image"}/> {/*company logo*/}
@@ -70,9 +80,9 @@ export default function TestimonialSection() {
                     </div>
                   </div>
                 </div>
-                <div className={styles.testimonialBox}>
+                <div className={currentModeState === 'light' ? styles.testimonialBoxLight : styles.testimonialBoxDark}>
                   <div>
-                  <Image src={companyLogo3} alt={"image"}/> {/*company logo*/}
+                  <Image src={currentModeState === 'light' ? companyLogoLight3 : companyLogoDark3} alt={"image"}/> {/*company logo*/}
                   <Image src={stars} alt={"image"}/> {/*stars*/}
                   </div>
 

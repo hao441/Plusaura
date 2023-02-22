@@ -25,31 +25,30 @@ export default function Home() {
 
   return (
     <>
-    
     <div className={mode === 'dark' ? 'dark' : 'light'}>
       <div className={!contactMenu ? 'pop-off' : 'pop-on'}>
-        <PopUp
+        <PopUp 
           newContactState={setContactMenu}
-          />
+          currentModeState={mode}
+        />
       </div>
       <div className='main-grid'>
         <HeadSection />
-        
         <HeaderSection
-        currentMobileState={mobileMenu}
-        newMobileState={setMobileMenu}
-        currentModeState={mode}
-        newModeState={setMode}
-        currentContactState={contactMenu}
-        newContactState={setContactMenu}
+          currentMobileState={mobileMenu}
+          newMobileState={setMobileMenu}
+          currentModeState={mode}
+          newModeState={setMode}
+          currentContactState={contactMenu}
+          newContactState={setContactMenu}
         />
-        <HomePageSection />
-        <OurServicesSection />
-        <WhyChooseUsSection />
-        <OurPortfolioSection />
-        <TestimonialSection />
-        <ContactUsSection />
-        <FooterSection />
+        <HomePageSection  currentModeState={mode}/>
+        <OurServicesSection currentModeState={mode}/>
+        <WhyChooseUsSection currentModeState={mode}/>
+        <OurPortfolioSection currentModeState={mode}/>
+        <TestimonialSection currentModeState={mode}/>
+        <ContactUsSection currentModeState={mode}/>
+        <FooterSection currentModeState={mode}/>
         {/* <MainSection /> */}
       </div>
       </div>

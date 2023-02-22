@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import logo from '../../assets/logo.png';
-import darkMode from '../../assets/dark-mode.png'
+import logoDark from '../../assets/logo-dark.png';
+import darkMode from '../../assets/dark-mode.png';
+import lightMode from '../../assets/light-mode.png';
 
 import { useState } from 'react';
 
@@ -37,19 +39,19 @@ export default function HeaderSection({ currentMobileState, newMobileState, curr
         <div className="header">
           <div className='header-grid-main'>
               <div className={styles.image}>
-                <Image className={styles.logo} src={logo} alt="image" height={31.38} width={105.4}/>
+                <Image className={styles.logo} src={currentModeState === 'light' ? logoDark : logo} alt="image" height={31.38} width={105.4}/>
               </div>
               <div className={styles.navbar}>
-                <a className="navbar-item active" href="#home">Home</a>
-                <a className="navbar-item" href="#aboutus">About Us</a>
-                <a className="navbar-item" href="#home">Our Services</a>
-                <a className="navbar-item" href="#home">Testimonials</a>
-                <a className="navbar-item" href="#home">Our Projects</a>
-                <a className="navbar-item" href="#home">Contact Us</a>
+                <a className={currentModeState === 'light' ? 'light-text' : 'dark-text'} href="#home">Home</a>
+                <a className={currentModeState === 'light' ? 'light-text' : 'dark-text'}  href="#aboutus">About Us</a>
+                <a  className={currentModeState === 'light' ? 'light-text' : 'dark-text'} href="#home">Our Services</a>
+                <a  className={currentModeState === 'light' ? 'light-text' : 'dark-text'} href="#home">Testimonials</a>
+                <a  className={currentModeState === 'light' ? 'light-text' : 'dark-text'} href="#home">Our Projects</a>
+                <a  className={currentModeState === 'light' ? 'light-text' : 'dark-text'} href="#home">Contact Us</a>
 
               </div>
               <div className={styles.darkTouch}>
-                <Image className='dl-mode' src={darkMode} alt="light/dark mode" onClick={handleMode}/>
+                <Image className='dl-mode' src={currentModeState === 'light' ? lightMode : darkMode} alt="light/dark mode" onClick={handleMode}/>
                 <button className={styles.headerButton} onClick={handleContact}>Get in Touch</button>
               </div>
             </div>

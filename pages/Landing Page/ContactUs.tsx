@@ -4,8 +4,12 @@ import contactImage from '../../assets/contact-us-image.png';
 
 import styles from '../../styles/Landing Page/ContactUs.module.css'
 
+interface ModeState {
+  currentModeState: string;
+}
 
-export default function ContactFormSection() {
+
+export default function ContactFormSection({currentModeState}:ModeState) {
 
     const [fullname, setFullname] = useState('fads');
     const [email, setEmail] = useState('gordonchalice@gmail.com');
@@ -49,16 +53,16 @@ export default function ContactFormSection() {
             <div>
               <Image className={styles.contactImage} src={contactImage} alt={'image'} />
             </div>
-            <div className={styles.contactForm}>
+            <div className={currentModeState === 'light' ? styles.contactFormLight : styles.contactFormDark }>
               <div>
                 <h3 className={styles.contactFormTitle}>Let&apos;s Talk</h3>
                 <p className={styles.contactFormSubtitle}>Lorem ipsum dolor sit amet consectetur. Ut non pellentesque lacinia convallis vitae.</p>
               </div>
               <div>
                 <form id='contact-form' className={styles.formElements} onSubmit={sendEmail}>
-                  <input id="name" value={fullname} onChange={(e) => setFullname(e.target.value)} className={styles.formInput} type={"text"} name={"name"} placeholder={"Enter your name"} required/>
-                  <input id="email" value={email} onChange={(e) => setEmail(e.target.value)} className={styles.formInput} type={"email"} name={"email"} placeholder={"Enter your email"} required/>
-                  <input id="message" value={message} onChange={(e) => setMessage(e.target.value)} className={styles.messageInput} type={"text"} name={"message"} placeholder={"Enter your message"}/>
+                  <input id="name" value={fullname} onChange={(e) => setFullname(e.target.value)} className={currentModeState == 'light' ? styles.formInputLight : styles.formInputDark} type={"text"} name={"name"} placeholder={"Enter your name"} required/>
+                  <input id="email" value={email} onChange={(e) => setEmail(e.target.value)} className={currentModeState == 'light' ? styles.formInputLight : styles.formInputDark} type={"email"} name={"email"} placeholder={"Enter your email"} required/>
+                  <input id="message" value={message} onChange={(e) => setMessage(e.target.value)} className={currentModeState == 'light' ? styles.formInputLight : styles.formInputDark} type={"text"} name={"message"} placeholder={"Enter your message"}/>
                   <div>
                   
                     <div className={styles.checkBoxGroup}>
@@ -73,7 +77,7 @@ export default function ContactFormSection() {
 
           </div>
 
-          <div className='get-in-touch-box margin-top'>
+          <div className={currentModeState === 'light' ? 'get-in-touch-box-light margin-top' : 'get-in-touch-box-dark margin-top'}>
               <div>
                 <h5 className='get-in-touch-title'>Text Title Here</h5>
                 <p className='get-in-touch-subtitle'>Lorem ipsum dolor sit amet consectetur. Dictum erat odio integer purus eget porta fermentum.</p>

@@ -5,7 +5,17 @@
     grid-template-rows: 1fr;
 }
 
-    .contactForm {
+    .contactFormLight {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 10fr;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 36px rgba(0, 0, 0, 0.08);
+        height: 70vh;
+        padding: 0px 50px 0px 50px;
+    }
+
+    .contactFormDark {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 10fr;
@@ -45,7 +55,15 @@
         row-gap: 12px;
     }
 
-    .formInput {
+    .formInputLight {
+        border: 1px solid #EAEAEA;
+        background: #FFFFFF;
+        font-size: 16px;
+        color: black;
+        padding: 20px;
+    }
+
+    .formInputDark {
         border: 1px solid #2B272E;
         background-color: #1C1A1F;
         font-size: 16px;

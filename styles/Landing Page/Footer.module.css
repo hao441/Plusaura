@@ -1,4 +1,9 @@
-.footerBox {
+.footerBoxLight {
+    background-color: #FBFBFB;
+    padding: 100px;
+}
+
+.footerBoxDark {
     background-color: #211F24;
     padding: 100px;
 }
@@ -38,13 +43,24 @@
     justify-self: end;
 }
 
-.subscribeInput {
+.subscribeInputLight {
+    width: 293px;
+    height: 44px;
+    color: black;
+    font-size: 16px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+}
+
+
+
+.subscribeInputDark {
     width: 293px;
     height: 44px;
     color: white;
     font-size: 16px;
-background: #28262A;
-border: 1px solid #383639;
+    background: #28262A;
+    border: 1px solid #383639;
 }
 
 .subscribeButton {

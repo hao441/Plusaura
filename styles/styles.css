@@ -36,22 +36,37 @@ body {
 
 /* Tag Styles */
 .light {
-    color: white;
-    background-color: #09050D;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    padding-left: 5vw;
-    padding-right: 5vw;
-}
-
-.dark {
   color: #09050D;
   background-color: white;
   padding-top: 10vh;
   padding-bottom: 10vh;
   padding-left: 5vw;
   padding-right: 5vw;
+  transition: background-color 0.5s ease;
 }
+
+.dark {
+    color: white;
+    background-color: #09050D;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    transition: background-color 0.5s ease;
+}
+
+
+
+.light-text {
+  color: black;
+}
+
+.dark-text {
+  color: white;
+}
+
+
+
 
 h1 {
     font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
@@ -94,7 +109,6 @@ a {
     font-weight: 400;
     font-size: 16px;
     text-decoration: none;
-    color: white;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -144,12 +158,29 @@ a {
 
 /* Other Global Classes */
 
+
 .pop-off {
-  display: none;
+  visibility:visible;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes hide {
+  to {
+    visibility: hidden;
+  }
+}
+
+.pop-off {
+  animation-name: hide;
+  animation-duration: 0.001s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 .pop-on {
-  display: block;
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
 
 .pop-up {
@@ -207,15 +238,26 @@ a {
 
 /* Get in touch */
 
-.get-in-touch-box {
+.get-in-touch-box-light {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr;
     align-items: center;
-    background-color: #18151B;
+    background-color: #F6F6F6;
     justify-content: stretch;
     padding: 0;
     margin: 0;
+}
+
+.get-in-touch-box-dark {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  background-color: #18151B;
+  justify-content: stretch;
+  padding: 0;
+  margin: 0;
 }
 
 .get-in-touch-title {

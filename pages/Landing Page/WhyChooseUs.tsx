@@ -2,15 +2,25 @@ import Image from 'next/image';
 
 //images
 import chooseImage from '../../assets/why-choose-us-image.png';
-import boxImage1 from '../../assets/why-choose-us/box-1-image.png';
-import boxImage2 from '../../assets/why-choose-us/box-2-image.png';
-import boxImage3 from '../../assets/why-choose-us/box-3-image.png';
+
+//dark
+import boxImageDark1 from '../../assets/why-choose-us/dark/1.png';
+import boxImageDark2 from '../../assets/why-choose-us/dark/2.png';
+import boxImageDark3 from '../../assets/why-choose-us/dark/3.png';
+
+//light
+import boxImageLight1 from '../../assets/why-choose-us/light/1.png';
+import boxImageLight2 from '../../assets/why-choose-us/light/2.png';
+import boxImageLight3 from '../../assets/why-choose-us/light/3.png';
 
 import styles from '../../styles/Landing Page/WhyChooseUs.module.css'
 
+interface ModeState {
+  currentModeState: string;
+}
 
 
-export default function WhyChooseUsSection() {
+export default function WhyChooseUsSection({currentModeState}:ModeState) {
     return (
       <>
         <div className="why-choose-us mobile-hide">
@@ -27,7 +37,7 @@ export default function WhyChooseUsSection() {
               
               <div className={styles.clientBoxes}>
                 <div className={styles.clientBox}>
-                <Image className={styles.boxImage} src={boxImage1} alt={"image"} />
+                <Image className={styles.boxImage} src={currentModeState === 'light' ? boxImageLight1 : boxImageDark1} alt={"image"} />
                 <div className={styles.clientText}>
                     <h4 className={styles.clientTextTitle}>Focus on Client Problem</h4>
                     <p className={styles.clientTextSubtitle}>Work with small to large business willing to bring there brand to the next level with slick designs.</p>
@@ -35,7 +45,7 @@ export default function WhyChooseUsSection() {
                 </div>
 
                 <div className={styles.clientBox}>
-                <Image className={styles.boxImage} src={boxImage2} alt={"image"} />
+                <Image className={styles.boxImage} src={currentModeState === 'light' ? boxImageLight2 : boxImageDark2} alt={"image"} />
                   <div className={styles.clientText}>
                     <h4 className={styles.clientTextTitle}>Provide a Real Solution</h4>
                     <p className={styles.clientTextSubtitle}>Optimalise website for increasing sales, creating funnels to drive more sales.</p>
@@ -44,7 +54,7 @@ export default function WhyChooseUsSection() {
 
                 <div className={styles.clientBox}>
                   <div>
-                    <Image className={styles.boxImage} src={boxImage3} alt={"image"} />
+                    <Image className={styles.boxImage} src={currentModeState === 'light' ? boxImageLight3 : boxImageDark3} alt={"image"} />
                   </div>
                   <div className={styles.clientText}>
                     <h4 className={styles.clientTextTitle}>High Quality Service</h4>
@@ -56,7 +66,7 @@ export default function WhyChooseUsSection() {
           </div>
 
 
-            <div className='get-in-touch-box margin-auto'>
+            <div className={currentModeState === 'light' ? 'get-in-touch-box-light margin-auto' : 'get-in-touch-box-dark margin-auto'}>
               <div>
                 <h5 className='get-in-touch-title'>Text Title Here</h5>
                 <p className='get-in-touch-subtitle'>Lorem ipsum dolor sit amet consectetur. Dictum erat odio integer purus eget porta fermentum.</p>

@@ -8,7 +8,11 @@ import portfolio4 from '../../assets/our-portfolio/portfolio-4.png';
 
 import styles from '../../styles/Landing Page/OurPortfolio.module.css'
 
-export default function OurPortfolioSection() {
+interface ModeState {
+  currentModeState: string;
+}
+
+export default function OurPortfolioSection({currentModeState}:ModeState) {
     return (
       <>
        <div className="our-portfolio">
@@ -25,7 +29,7 @@ export default function OurPortfolioSection() {
               <Image src={portfolio4} alt={"image"}/>
             </div>
 
-            <div className='get-in-touch-box margin-top'>
+            <div className={currentModeState === 'light' ? 'get-in-touch-box-light margin-top' : 'get-in-touch-box-dark margin-top'}>
               <div>
                 <h5 className='get-in-touch-title'>Text Title Here</h5>
                 <p className='get-in-touch-subtitle'>Lorem ipsum dolor sit amet consectetur. Dictum erat odio integer purus eget porta fermentum.</p>

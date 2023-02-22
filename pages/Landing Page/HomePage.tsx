@@ -3,7 +3,11 @@ import image from '../../assets/homepage-image.png';
 
 import styles from '../../styles/Landing Page/HomePage.module.css'
 
-export default function HomePageSection() {
+interface ModeState {
+  currentModeState: string;
+}
+
+export default function HomePageSection({currentModeState}:ModeState) {
     return (
       <>
         <div className="homepage mobile-hide">
@@ -22,7 +26,7 @@ export default function HomePageSection() {
               
               <div className={styles.headerButtons}>
                 <span className={styles.test}><button className="get-in-touch-button-no-margin">Get in Touch</button></span>
-                <button className={styles.ourServicesButton}>Our Services</button>
+                <button className={currentModeState === 'light' ? styles.ourServicesButtonLight : styles.ourServicesButtonDark}>Our Services</button>
               </div>
 
             </div>

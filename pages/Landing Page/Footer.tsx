@@ -3,11 +3,15 @@ import logo from '../../assets/logo.png';
 
 import styles from '../../styles/Landing Page/Footer.module.css'
 
-export default function FooterSection() {
+interface ModeState {
+  currentModeState: string;
+}
+
+export default function FooterSection({currentModeState}: ModeState) {
     return (
       <>
           <div className="footer">
-            <div className={styles.footerBox}>
+            <div className={currentModeState === 'light' ? styles.footerBoxLight : styles.footerBoxDark}>
             <div className={styles.footerGrid}>
               <div>
                 <Image src={logo} alt="image" height={31.38} width={105.4}/>
@@ -30,7 +34,7 @@ export default function FooterSection() {
                 <p className={styles.sectionText}>Newletter Paragraph Text</p>
 
                 <form>
-                  <input id="subscription-email-field" className={styles.subscribeInput} type={"email"} />
+                  <input id="subscription-email-field" className={currentModeState === 'light' ? styles.subscribeInputLight : styles.subscribeInputDark} type={"email"} placeholder={'Enter your email address'}/>
                   <button className={styles.subscribeButton}>Subscribe</button>
                 </form> 
               </div>

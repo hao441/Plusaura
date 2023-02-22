@@ -1,18 +1,31 @@
 import Image from 'next/image'
 
 //images  
-import service1 from '../../assets/our-services/1.png';
-import service2 from '../../assets/our-services/2.png';
-import service3 from '../../assets/our-services/3.png';
-import service4 from '../../assets/our-services/4.png';
-import service5 from '../../assets/our-services/5.png';
-import service6 from '../../assets/our-services/6.png';
+
+//dark
+import serviceDark1 from '../../assets/our-services/dark/1.png';
+import serviceDark2 from '../../assets/our-services/dark/2.png';
+import serviceDark3 from '../../assets/our-services/dark/3.png';
+import serviceDark4 from '../../assets/our-services/dark/4.png';
+import serviceDark5 from '../../assets/our-services/dark/5.png';
+import serviceDark6 from '../../assets/our-services/dark/6.png';
+
+//light
+import serviceLight1 from '../../assets/our-services/light/1.png';
+import serviceLight2 from '../../assets/our-services/light/2.png';
+import serviceLight3 from '../../assets/our-services/light/3.png';
+import serviceLight4 from '../../assets/our-services/light/4.png';
+import serviceLight5 from '../../assets/our-services/light/5.png';
+import serviceLight6 from '../../assets/our-services/light/6.png';
 
 import styles from '../../styles/Landing Page/OurServices.module.css'
 
+interface ModeState {
+  currentModeState: string;
+}
 
 
-export default function OurServicesSection() {
+export default function OurServicesSection({currentModeState}:ModeState) {
     return (
       <>
       <div className='our-services'>
@@ -25,27 +38,27 @@ export default function OurServicesSection() {
 
             <div className={styles.serviceGrid}>
               <div className={styles.serviceBox}>
-                <Image className='small-image' src={service1} alt={"image"}/>
+                <Image className='small-image' src={currentModeState === 'light' ? serviceLight1 : serviceDark1} alt={"image"}/>
                 <p>Digital Marketing</p>
               </div>
               <div className={styles.serviceBox}>
-                <Image className='small-image' src={service2} alt={"image"}/>
+                <Image className='small-image' src={currentModeState === 'light' ? serviceLight2 : serviceDark2} alt={"image"}/>
                 <p>App/Website Design</p>
               </div>
               <div className={styles.serviceBox}>
-                <Image className='small-image' src={service3} alt={"image"}/>
+                <Image className='small-image' src={currentModeState === 'light' ? serviceLight3 : serviceDark3} alt={"image"}/>
                 <p>App/Website Development</p>
               </div>
               <div className={styles.serviceBox}>
-                <Image className='small-image' src={service4} alt={"image"}/>
+                <Image className='small-image' src={currentModeState === 'light' ? serviceLight4 : serviceDark4} alt={"image"}/>
                 <p>Brand Design</p>
               </div>
               <div className={styles.serviceBox}>
-                <Image className='small-image' src={service5} alt={"image"}/>
+                <Image className='small-image' src={currentModeState === 'light' ? serviceLight5 : serviceDark5} alt={"image"}/>
                 <p>Social Media Strategies</p>
               </div>
               <div className={styles.serviceBox}>
-                <Image className='small-image' src={service6} alt={"image"}/>
+                <Image className='small-image' src={currentModeState === 'light' ? serviceLight6 : serviceDark6} alt={"image"}/>
                 <p>Product Consultation</p>
               </div>
             </div>
