@@ -3,17 +3,23 @@ import { useState } from 'react';
 import styles from '../../styles/Landing Page/ContactUs.module.css'
 
 interface CancelProp {
+    currentContactState: boolean;
     newContactState: React.Dispatch<React.SetStateAction<boolean>>;
     currentModeState: string;
   }
 
-export default function PopUp({ newContactState, currentModeState }: CancelProp) {
+export default function PopUp({ currentContactState, newContactState, currentModeState }: CancelProp) {
 
     const [fullname, setFullname] = useState('fads');
     const [email, setEmail] = useState('gordonchalice@gmail.com');
     const [message, setMessage] = useState('fgds');
     const [submitted, setSubmitted] = useState(false)
     const [alert, setAlert] = useState('');
+
+    const handleContact = (e: { preventDefault: () => void; }) => {
+      e.preventDefault();
+      return !currentContactState ? newContactState(true) : newContactState(false);
+    }
 
     const sendEmail = async (e: { preventDefault: () => void; }) => {
 
@@ -51,7 +57,10 @@ export default function PopUp({ newContactState, currentModeState }: CancelProp)
     <div id='pop-up' className='pop-up'>
       <div className={currentModeState === 'light' ? styles.contactFormLight : styles.contactFormDark}>
               <div>
-                <h3 className={styles.contactFormTitle}>Let&apos;s Talk</h3>
+                <div className={styles.contactFormTop}>
+                  <h3 className={styles.contactFormTitle}>Let&apos;s Talk</h3>
+                  <p onClick={handleContact} className={currentModeState === 'light' ? styles.contactFormCancelLight : styles.contactFormCancelDark}>x</p>
+                </div>
                 <p className={styles.contactFormSubtitle}>Lorem ipsum dolor sit amet consectetur. Ut non pellentesque lacinia convallis vitae.</p>
               </div>
               <div>
@@ -66,7 +75,7 @@ export default function PopUp({ newContactState, currentModeState }: CancelProp)
                       <p className={styles.checkBoxText}>I agree that the data I submit will be collected and stored.</p>
                     </div>
                     <button className={!submitted ? 'get-in-touch-button margin-auto' : 'get-in-touch-button margin-auto'} disabled={submitted}>Submit</button>
-                    </div>
+                  </div>
                 </form>
               </div>
             </div>

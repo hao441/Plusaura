@@ -28,6 +28,7 @@ export default function Home() {
     <div className={mode === 'dark' ? 'dark' : 'light'}>
       <div className={!contactMenu ? 'pop-off' : 'pop-on'}>
         <PopUp 
+          currentContactState={contactMenu}
           newContactState={setContactMenu}
           currentModeState={mode}
         />
@@ -42,12 +43,32 @@ export default function Home() {
           currentContactState={contactMenu}
           newContactState={setContactMenu}
         />
-        <HomePageSection  currentModeState={mode}/>
-        <OurServicesSection currentModeState={mode}/>
-        <WhyChooseUsSection currentModeState={mode}/>
-        <OurPortfolioSection currentModeState={mode}/>
+        <HomePageSection 
+          currentModeState={mode}
+          currentContactState ={contactMenu}
+          newContactState={setContactMenu}
+        />
+        <OurServicesSection 
+          currentModeState={mode}
+          currentContactState={contactMenu}
+          newContactState={setContactMenu}
+        />
+        <WhyChooseUsSection 
+          currentModeState={mode}
+          currentContactState={contactMenu}
+          newContactState={setContactMenu}
+        />
+        <OurPortfolioSection 
+          currentModeState={mode}
+          currentContactState={contactMenu}
+          newContactState={setContactMenu}
+        />
         <TestimonialSection currentModeState={mode}/>
-        <ContactUsSection currentModeState={mode}/>
+        <ContactUsSection 
+          currentModeState={mode}
+          currentContactState={contactMenu}
+          newContactState={setContactMenu}
+        />
         <FooterSection currentModeState={mode}/>
         {/* <MainSection /> */}
       </div>

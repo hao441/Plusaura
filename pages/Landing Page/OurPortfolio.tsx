@@ -10,9 +10,17 @@ import styles from '../../styles/Landing Page/OurPortfolio.module.css'
 
 interface ModeState {
   currentModeState: string;
+  currentContactState: boolean;
+  newContactState: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function OurPortfolioSection({currentModeState}:ModeState) {
+export default function OurPortfolioSection({currentModeState, currentContactState, newContactState}:ModeState) {
+
+  const handleContact = (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+    return !currentContactState ? newContactState(true) : newContactState(false);
+  }
+
     return (
       <>
        <div className="our-portfolio">
@@ -35,7 +43,7 @@ export default function OurPortfolioSection({currentModeState}:ModeState) {
                 <p className='get-in-touch-subtitle'>Lorem ipsum dolor sit amet consectetur. Dictum erat odio integer purus eget porta fermentum.</p>
               </div>
               <div className='get-in-touch-button-box'>
-                <button className='get-in-touch-button'>Get in Touch</button>
+                <button className='get-in-touch-button' onClick={handleContact}>Get in Touch</button>
               </div>
             </div>  
           </div>

@@ -5,9 +5,17 @@ import styles from '../../styles/Landing Page/HomePage.module.css'
 
 interface ModeState {
   currentModeState: string;
+  currentContactState: boolean;
+  newContactState: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function HomePageSection({currentModeState}:ModeState) {
+export default function HomePageSection({currentModeState, currentContactState, newContactState}:ModeState) {
+
+  const handleContact = (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+    return !currentContactState ? newContactState(true) : newContactState(false);
+  }
+
     return (
       <>
         <div className="homepage mobile-hide">
@@ -25,7 +33,7 @@ export default function HomePageSection({currentModeState}:ModeState) {
               </div>
               
               <div className={styles.headerButtons}>
-                <span className={styles.test}><button className="get-in-touch-button-no-margin">Get in Touch</button></span>
+                <span className={styles.test}><button className="get-in-touch-button-no-margin" onClick={handleContact}>Get in Touch</button></span>
                 <button className={currentModeState === 'light' ? styles.ourServicesButtonLight : styles.ourServicesButtonDark}>Our Services</button>
               </div>
 

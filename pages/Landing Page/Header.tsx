@@ -95,7 +95,7 @@ export default function HeaderSection({ currentMobileState, newMobileState, curr
                       <hr className='menu-hr'/>
                       <li><a href="#">contact</a></li>
                       <hr className='menu-hr'/>
-                      <button className={styles.headerButtonMobile}>Get in Touch</button>
+                      <button className={styles.headerButtonMobile} onClick={handleContact}>Get in Touch</button>
                     </div>
                   </div>
                 </div>

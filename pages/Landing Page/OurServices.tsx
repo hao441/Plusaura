@@ -22,10 +22,18 @@ import styles from '../../styles/Landing Page/OurServices.module.css'
 
 interface ModeState {
   currentModeState: string;
+  currentContactState: boolean;
+  newContactState: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 
-export default function OurServicesSection({currentModeState}:ModeState) {
+export default function OurServicesSection({currentModeState, currentContactState, newContactState}:ModeState) {
+
+  const handleContact = (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+    return !currentContactState ? newContactState(true) : newContactState(false);
+  }
+
     return (
       <>
       <div className='our-services'>
@@ -65,7 +73,7 @@ export default function OurServicesSection({currentModeState}:ModeState) {
 
             <div className={styles.getInTouch}>
               <p className={styles.getInTouchText}>Interested in knowing more details about our service? No problem, just</p>
-              <button className='get-in-touch-button'>Get in Touch</button>
+              <button className='get-in-touch-button' onClick={handleContact}>Get in Touch</button>
             </div>
           </div>
         </div>

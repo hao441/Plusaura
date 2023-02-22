@@ -6,16 +6,23 @@ import styles from '../../styles/Landing Page/ContactUs.module.css'
 
 interface ModeState {
   currentModeState: string;
+  currentContactState: boolean;
+  newContactState: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 
-export default function ContactFormSection({currentModeState}:ModeState) {
+export default function ContactFormSection({currentModeState, currentContactState, newContactState}:ModeState) {
 
     const [fullname, setFullname] = useState('fads');
     const [email, setEmail] = useState('gordonchalice@gmail.com');
     const [message, setMessage] = useState('fgds');
     const [submitted, setSubmitted] = useState(false)
     const [alert, setAlert] = useState('');
+
+    const handleContact = (e: { preventDefault: () => void; }) => {
+      e.preventDefault();
+      return !currentContactState ? newContactState(true) : newContactState(false);
+    }
 
     const sendEmail = async (e: { preventDefault: () => void; }) => {
 
@@ -55,7 +62,7 @@ export default function ContactFormSection({currentModeState}:ModeState) {
             </div>
             <div className={currentModeState === 'light' ? styles.contactFormLight : styles.contactFormDark }>
               <div>
-                <h3 className={styles.contactFormTitle}>Let&apos;s Talk</h3>
+                  <h3 className={styles.contactFormTitle}>Let&apos;s Talk</h3>
                 <p className={styles.contactFormSubtitle}>Lorem ipsum dolor sit amet consectetur. Ut non pellentesque lacinia convallis vitae.</p>
               </div>
               <div>
@@ -83,7 +90,7 @@ export default function ContactFormSection({currentModeState}:ModeState) {
                 <p className='get-in-touch-subtitle'>Lorem ipsum dolor sit amet consectetur. Dictum erat odio integer purus eget porta fermentum.</p>
               </div>
               <div className='get-in-touch-button-box'>
-                <button className='get-in-touch-button'>Get in Touch</button>
+                <button className='get-in-touch-button' onClick={handleContact}>Get in Touch</button>
               </div>
             </div>  
           
