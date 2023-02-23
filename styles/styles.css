@@ -222,6 +222,16 @@ a {
     margin: 20px;
 }
 
+.get-in-touch-button-submitted {
+  width: 200px;
+  height: 44px;
+  background: linear-gradient(229.76deg, #008f97 -61.91%, #00868d 34.74%, #1c2e6e 97.61%);
+  border-style: none;
+  font-size: 16px;
+  color: white;
+  margin: 20px;
+}
+
 .get-in-touch-button-no-margin {
     width: 200px;
     height: 44px;
@@ -272,6 +282,10 @@ a {
 
 .margin-top {
     margin-top: 50px;
+}
+
+.padding-top {
+  padding-top: 50px;
 }
 
 .margin-bottom {
@@ -596,7 +610,15 @@ a {
       overflow: hidden;
     }
 
+    .pop-up {
+      top: 10%;
+      left: 10%;
+      height: 70vh;
+      width: 80vw;
+    }
+
 }
+
 
 
 @media only screen and (max-width: 400px) {
@@ -631,6 +653,14 @@ a {
   .footer {
       margin-bottom: 25vh;
   }
+
+  .pop-up {
+    top: 5%;
+    left: 10%;
+    height: 80vh;
+    width: 80vw;
+    z-index: 99;
+  }
 }
 
 @media only screen and (max-width: 350px) {
@@ -639,7 +669,7 @@ a {
 }
 
 .homepage {
-    margin-bottom: 70vh;
+    margin-bottom: 12vh;
 }
 
 .our-services{

@@ -71,12 +71,19 @@
     color: #9C9C9C;
 }
 
+/* Very Large Display i.e monitor */
+@media only screen and (max-width: 2500px) {
+    .chooseImage {
+        width: 38vw;
+        height: 43vh;   
+    }
+}
 
 /* Large Display i.e monitor */
-@media only screen and (max-width: 5000px) {
+@media only screen and (max-width: 2500px) {
     .chooseImage {
-        width: 40vw;
-        height: 45vh;   
+        width: 38vw;
+        height: 43vh;   
     }
 }
 
@@ -84,7 +91,7 @@
 @media only screen and (max-width: 2000px) {
     .chooseImage {
         width: 40vw;
-        height: 23vh;   
+        height: 75vh;   
     }
 }
 
@@ -105,15 +112,16 @@
 }
 
 /* Mobile Display */
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1010px) {
     .whyChooseUsGrid {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         max-height: 100vh;
+        width: 96vw;
         justify-items: center;
         margin-bottom: -7vh;
-        padding: 0;
+        padding-bottom: 150vh;
     }
 
     .chooseImage {
@@ -131,6 +139,7 @@
 
     .whyChooseUsGrid {
         margin-bottom: 7vh;
+        padding-bottom: 120vh;
     }
 }
 
@@ -138,6 +147,8 @@
 @media only screen and (max-width: 500px) {
     .whyChooseUsGrid {
         margin-bottom: 53vh;
+        padding-bottom: 100vh;
+
     }
 
     .clientBox {

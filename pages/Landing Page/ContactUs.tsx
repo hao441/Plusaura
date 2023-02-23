@@ -13,9 +13,9 @@ interface ModeState {
 
 export default function ContactFormSection({currentModeState, currentContactState, newContactState}:ModeState) {
 
-    const [fullname, setFullname] = useState('fads');
-    const [email, setEmail] = useState('gordonchalice@gmail.com');
-    const [message, setMessage] = useState('fgds');
+    const [fullname, setFullname] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
     const [submitted, setSubmitted] = useState(false)
     const [alert, setAlert] = useState('');
 
@@ -55,7 +55,7 @@ export default function ContactFormSection({currentModeState, currentContactStat
 
     return (
       <>
-        <div className="contact-us">
+        <div id={'contact-section'} className="contact-us">
           <div className={styles.contactUsGrid}>
             <div>
               <Image className={styles.contactImage} src={contactImage} alt={'image'} />
@@ -69,14 +69,14 @@ export default function ContactFormSection({currentModeState, currentContactStat
                 <form id='contact-form' className={styles.formElements} onSubmit={sendEmail}>
                   <input id="name" value={fullname} onChange={(e) => setFullname(e.target.value)} className={currentModeState == 'light' ? styles.formInputLight : styles.formInputDark} type={"text"} name={"name"} placeholder={"Enter your name"} required/>
                   <input id="email" value={email} onChange={(e) => setEmail(e.target.value)} className={currentModeState == 'light' ? styles.formInputLight : styles.formInputDark} type={"email"} name={"email"} placeholder={"Enter your email"} required/>
-                  <input id="message" value={message} onChange={(e) => setMessage(e.target.value)} className={currentModeState == 'light' ? styles.formInputLight : styles.formInputDark} type={"text"} name={"message"} placeholder={"Enter your message"}/>
+                  <input id="message" value={message} onChange={(e) => setMessage(e.target.value)} className={currentModeState == 'light' ? styles.messageInputLight : styles.messageInputDark} type={"text"} name={"message"} placeholder={"Enter your message"}/>
                   <div>
                   
                     <div className={styles.checkBoxGroup}>
                       <input id="checkbox" className={styles.checkBox} type={"checkbox"} name={"checkbox"} required/>
                       <p className={styles.checkBoxText}>I agree that the data I submit will be collected and stored.</p>
                     </div>
-                    <button className={!submitted ? 'get-in-touch-button margin-auto' : 'get-in-touch-button margin-auto'} disabled={submitted}>Submit</button>
+                    <button className={!submitted ? 'get-in-touch-button margin-auto' : 'get-in-touch-button-submitted margin-auto'} disabled={submitted}>{submitted ? 'Submitted' : 'Submit'}</button>
                     </div>
                 </form>
               </div>

@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import styles from '../../styles/Landing Page/ContactUs.module.css'
+import styles from '../../styles/Landing Page/PopUp.module.css'
 
 interface CancelProp {
     currentContactState: boolean;
@@ -10,9 +10,9 @@ interface CancelProp {
 
 export default function PopUp({ currentContactState, newContactState, currentModeState }: CancelProp) {
 
-    const [fullname, setFullname] = useState('fads');
-    const [email, setEmail] = useState('gordonchalice@gmail.com');
-    const [message, setMessage] = useState('fgds');
+    const [fullname, setFullname] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
     const [submitted, setSubmitted] = useState(false)
     const [alert, setAlert] = useState('');
 
@@ -74,7 +74,7 @@ export default function PopUp({ currentContactState, newContactState, currentMod
                       <input id="checkbox" className={styles.checkBox} type={"checkbox"} name={"checkbox"} required/>
                       <p className={styles.checkBoxText}>I agree that the data I submit will be collected and stored.</p>
                     </div>
-                    <button className={!submitted ? 'get-in-touch-button margin-auto' : 'get-in-touch-button margin-auto'} disabled={submitted}>Submit</button>
+                    <button className={!submitted ? 'get-in-touch-button margin-auto' : 'get-in-touch-button-submitted margin-auto'} disabled={submitted}>{submitted ? 'Submitted' : "Submit"}</button>
                   </div>
                 </form>
               </div>

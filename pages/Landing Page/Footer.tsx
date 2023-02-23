@@ -3,12 +3,48 @@ import logo from '../../assets/logo.png';
 import logoDark from '../../assets/logo-dark.png';
 
 import styles from '../../styles/Landing Page/Footer.module.css'
+import { useState } from 'react';
 
 interface ModeState {
   currentModeState: string;
 }
 
 export default function FooterSection({currentModeState}: ModeState) {
+
+  const [email, setEmail] = useState('');
+  const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false);
+
+
+  const handleSubscription = async (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+
+    setLoading(true)
+
+    console.log("hello")
+  
+    const res = await fetch("/api/subscribe", {
+      body: JSON.stringify({
+        email: email
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "PUT",
+    });
+
+    const { error } = await res.json();
+    if (error) {
+      console.log(error);
+      return;
+    }
+
+  console.log(email);
+  setLoading(false)
+  return setSubmitted(true)
+}
+
+
     return (
       <>
           <div className="footer">
@@ -34,11 +70,12 @@ export default function FooterSection({currentModeState}: ModeState) {
                 <p className={styles.sectionHeader}>Subscribe Newsletter</p>
                 <p className={styles.sectionText}>Newletter Paragraph Text</p>
 
-                <form className={styles.subscribeInputSection}>
-                  <input id="subscription-email-field" className={currentModeState === 'light' ? styles.subscribeInputLight : styles.subscribeInputDark} type={"email"} placeholder={'Enter your email address'}/>
-                  <button className={styles.subscribeButton}>Subscribe</button>
+                <form className={styles.subscribeInputSection} onSubmit={handleSubscription}>
+                  <input id="subscription-email-field" value={email} onChange={(e) => setEmail(e.target.value)} className={currentModeState === 'light' ? styles.subscribeInputLight : styles.subscribeInputDark} type={"email"} placeholder={'Enter your email address'} required/>
+                  <button className={!submitted ? styles.subscribeButton : styles.subscribedButton} disabled={submitted}>{submitted ? 'Subscribed' : loading ? ". . ." : 'Subscribe'}</button>
                 </form> 
               </div>
+              <div></div>
               </div>
               
               <hr className={styles.hr}/>

@@ -12,7 +12,7 @@
         background: #FFFFFF;
         box-shadow: 0px 1px 36px rgba(0, 0, 0, 0.08);
         height: 84vh;
-        padding: 0px 50px 0px 50px;
+        padding: 0px 50px 30px 50px;
     }
 
     .contactFormDark {
@@ -28,28 +28,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-    }
-
-    .contactFormCancelLight {
-        font-size: 45px;
-        border-style: none;
-        background: none;
-        justify-self: end;
-        color: black;
-        margin-top: 25px;
-        font-weight: 400;
-        cursor: pointer;
-    }
-
-    .contactFormCancelDark {
-        font-size: 45px;
-        border-style: none;
-        background: none;
-        justify-self: end;
-        color: white;
-        margin-top: 25px;
-        font-weight: 400;
-        cursor: pointer;
     }
 
     .contactFormTitle {
@@ -84,11 +62,29 @@
         padding: 20px;
     }
 
-    .formInput::placeholder {
+    .formInputLight::placeholder {
         color: #5A5A5A;
     }
 
-    .messageInput {
+    .formInputDark::placeholder {
+        color: #5A5A5A;
+    }
+
+    
+
+    .messageInputLight {
+        border: 1px solid #EAEAEA;
+        background: #FFFFFF;
+        font-size: 16px;
+        color: black;
+        padding: 0px 20px 100px 20px;
+    }
+
+    .messageInputLight::placeholder {
+        color: #5A5A5A;
+    }
+
+    .messageInputDark {
         border: 1px solid #2B272E;
         background-color: #1C1A1F;
         font-size: 16px;
@@ -96,7 +92,7 @@
         padding: 0px 20px 100px 20px;
     }
 
-    .messageInput::placeholder {
+    .messageInputDark::placeholder {
         color: #5A5A5A;
     }
 
@@ -132,7 +128,7 @@
 @media only screen and (max-width: 5000px) {
     .contactImage {
         width: 35vw;
-        height: 40vh;   
+        height: 45vh;   
     }
 
     .contactFormLight {
@@ -163,7 +159,15 @@
 @media only screen and (max-width: 2000px) {
     .contactImage {
         width: 40vw;
-        height: 23vh;   
+        height: 80vh;   
+    }
+
+    .contactFormLight {
+        height: 80vh;
+    }
+
+    .contactFormDark {
+        height: 80vh;
     }
 }
 
@@ -186,6 +190,24 @@
     }
 }
 
+@media only screen and (max-width: 1500px) and (max-height: 850px) {
+    .contactImage {
+        width: 45vw;
+        height: 79.5vh;   
+        margin-right: 1vw;
+    }
+
+    .contactFormLight {
+        height: 15vh;
+        padding-bottom: 65vh;
+    }
+
+    .contactFormDark {
+        height: 45vh;
+        padding-bottom: 65vh;
+    }
+}
+
 /* Tall Display i.e Monitor in Portrait Mode */
 @media only screen and (max-width: 1500px) and (min-height: 2000px) {
     .contactImage {
@@ -195,7 +217,7 @@
 }
 
 /* Mobile Display */
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1010px) {
     .contactUsGrid {
         display: grid;
         grid-template-columns: 1fr;
@@ -203,7 +225,6 @@
         max-height: 100vh;
         justify-items: center;
         margin-bottom: -7vh;
-        padding: 0;
     }
 
     .contactImage {
@@ -296,6 +317,11 @@
 
 /* Smallest Mobile Display */
 @media only screen and (max-width: 350px) {
+    .contactFormLight {
+        padding-bottom: auto;
+    }
+
+
     .contactUsGrid {
         margin-bottom: 80vh;
     }

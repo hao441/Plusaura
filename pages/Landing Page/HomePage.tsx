@@ -33,7 +33,7 @@ export default function HomePageSection({currentModeState, currentContactState, 
               </div>
               
               <div className={styles.headerButtons}>
-                <span><button className="get-in-touch-button-no-margin" onClick={handleContact}>Get in Touch</button></span>
+                <span><button className={styles.getInTouch} onClick={handleContact}>Get in Touch</button></span>
                 <button className={currentModeState === 'light' ? styles.ourServicesButtonLight : styles.ourServicesButtonDark}>Our Services</button>
               </div>
 

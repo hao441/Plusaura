@@ -16,13 +16,22 @@ interface StateProps {
 }
 
 import styles from '../../styles/Landing Page/Header.module.css';
+import Link from 'next/link';
 export default function HeaderSection({ currentMobileState, newMobileState, currentModeState, newModeState, currentContactState, newContactState}: StateProps) {
 
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [check, setCheck] = useState(false);
+
+  const handleCheck = () => {
+    
+    !check ? setCheck(true) : setCheck(false);
+    !check ? newMobileState(true) : newMobileState(false);
+    return 
+
+  }
 
   const handleMobile = (e: { preventDefault: () => void; }) => {
 
-    return !currentMobileState ? newMobileState(true) : newMobileState(false);
   }
 
   const handleMode = () => {
@@ -32,6 +41,13 @@ export default function HeaderSection({ currentMobileState, newMobileState, curr
   const handleContact = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     return !currentContactState ? newContactState(true) : newContactState(false);
+  }
+
+  const handleMobileContact = (e: { preventDefault: () => void; }) => {
+    newContactState(true)
+
+    // handleCheck()
+
   }
 
     return (
@@ -60,7 +76,7 @@ export default function HeaderSection({ currentMobileState, newMobileState, curr
                 <div className="navbar">
                   <div className="container nav-container">
                     
-                    <input onClick={handleMobile} className="checkbox" type="checkbox" name="" id="" />
+                    <input onClick={handleMobile} className="checkbox" type="checkbox" name="" id="" checked={check} onChange={handleCheck}/>
                       <div className='header-grid'>
                         <div className={styles.image}>
                           <Image className={styles.logo} src={currentModeState === 'light' ? logoDark : logo} alt="image" height={31.38} width={105.4}/>
@@ -98,7 +114,8 @@ export default function HeaderSection({ currentMobileState, newMobileState, curr
                       <hr className='menu-hr'/>
                       <li><a href="#">contact</a></li>
                       <hr className='menu-hr'/>
-                      <button className={styles.headerButtonMobile} onClick={handleContact}>Get in Touch</button>
+                      <Link className={styles.headerButtonMobile} href={'#contact-section'}></Link>
+                      <button className={styles.headerButtonMobile} onClick={handleMobileContact}>Get in Touch</button>
                     </div>
                   </div>
                 </div>

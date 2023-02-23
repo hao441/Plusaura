@@ -76,6 +76,16 @@
     margin: 0;
 }
 
+.subscribedButton {
+    width: 140px;
+    height: 47px;
+    border-style: none;
+    color: white;
+    font-size: 16px;
+    background: linear-gradient(229.76deg, #01767c -61.91%, #017379 34.74%, #1b2e72 97.61%);
+    margin: 0;
+}
+
 .formInput {
     border: 1px solid #383639;
     background-color: #28262A;
@@ -107,7 +117,29 @@
     justify-self: end;
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1200px) {
+
+    .subscribeSection {
+        margin-left: 50px;
+    }
+
+    .subscribeInputLight {
+    width: 175px;
+    height: 35px;
+    color: black;
+    font-size: 14px;
+    }
+
+    .subscribeButton {
+        width: 75px;
+        height: 39px;
+        font-size: 14px;
+    }
+
+
+}
+
+@media only screen and (max-width: 1010px) {
 
     .logo {
         margin-top: 20px;
@@ -217,7 +249,7 @@
     }
 
     .subscribeButton {
-        width: 50vw;
+        width: 198px;
         height: 47px;
         border-style: none;
         color: white;
