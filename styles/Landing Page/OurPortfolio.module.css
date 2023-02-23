@@ -108,25 +108,26 @@
     .portfolioImage1  {
         justify-self: start;
         max-height: 35vh;
-        max-width: 80vw;
+        max-width: 90vw;
+        margin-bottom: 15px;
     }
     
     .portfolioImage2 {
         justify-self: start;
         max-height: 35vh;
-        max-width: 80vw;
+        max-width: 90vw;
     }
     
     .portfolioImage3 {
         justify-self: start;
         max-height: 35vh;
-        max-width: 80vw;
+        max-width: 90vw;
     }
     
     .portfolioImage4 {
         justify-self: start;
         max-height: 35vh;
-        max-width: 80vw;
+        max-width: 90vw;
         
     }
 }

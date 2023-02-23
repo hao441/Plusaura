@@ -33,6 +33,7 @@ export default function Home() {
           currentModeState={mode}
         />
       </div>
+
         <HeadSection />
         <HeaderSection
           currentMobileState={mobileMenu}
@@ -42,6 +43,8 @@ export default function Home() {
           currentContactState={contactMenu}
           newContactState={setContactMenu}
         />
+        <div className='black'></div>
+        <div className={mobileMenu ? 'none' : ''}>
         <HomePageSection 
           currentModeState={mode}
           currentContactState ={contactMenu}
@@ -70,6 +73,8 @@ export default function Home() {
         />
         <FooterSection currentModeState={mode}/>
         {/* <MainSection /> */}
+        </div>
+        
       </div>
     </>
   )

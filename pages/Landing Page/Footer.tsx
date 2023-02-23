@@ -14,8 +14,8 @@ export default function FooterSection({currentModeState}: ModeState) {
           <div className="footer">
             <div className={currentModeState === 'light' ? styles.footerBoxLight : styles.footerBoxDark}>
             <div className={styles.footerGrid}>
-              <div>
-                <Image src={currentModeState === 'light' ? logoDark : logo} alt="image" height={31.38} width={105.4}/>
+              <div className={styles.logoSection}>
+                <Image className={styles.logo} src={currentModeState === 'light' ? logoDark : logo} alt="image" height={31.38} width={105.4}/>
                 <p className={styles.logoText}>Lorem ipsum dolor sit amet consectetur. Vestibulum posuere nec leo eu. Ipsum consequat dui turpis velit suspendisse. </p>
               </div>
 

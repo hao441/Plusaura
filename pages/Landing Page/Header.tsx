@@ -79,11 +79,13 @@ export default function HeaderSection({ currentMobileState, newMobileState, curr
                           <button className={styles.headerButton}>Get in Touch</button>
                         </div>
                       </div>
-                      <div className="hamburger-lines">
+                      <div className="hamburger-lines" onClick={() => {currentMobileState ? setMobileMenu(false) : setMobileMenu(true)}}>
                         <span className="line line1"></span>
                         <span className="line line2"></span>
                         <span className="line line3"></span>
                       </div> 
+
+                      <h1>{currentMobileState}</h1>
                     <div className="menu-items">
                       <li><a href="#">Home</a></li>
                       <hr className='menu-hr'/>

@@ -75,7 +75,7 @@
 /* Large Display i.e monitor */
 @media only screen and (max-width: 5000px) {
     .chooseImage {
-        width: 35vw;
+        width: 40vw;
         height: 45vh;   
     }
 }
@@ -84,7 +84,15 @@
 @media only screen and (max-width: 2000px) {
     .chooseImage {
         width: 40vw;
-        height: 65vh;   
+        height: 23vh;   
+    }
+}
+
+/* Standard Display i.e laptop*/
+@media only screen and (max-width: 1500px) {
+    .chooseImage {
+        width: 40vw;
+        height: 60vh;   
     }
 }
 

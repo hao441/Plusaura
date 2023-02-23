@@ -33,13 +33,15 @@ export default function HomePageSection({currentModeState, currentContactState, 
               </div>
               
               <div className={styles.headerButtons}>
-                <span className={styles.test}><button className="get-in-touch-button-no-margin" onClick={handleContact}>Get in Touch</button></span>
+                <span><button className="get-in-touch-button-no-margin" onClick={handleContact}>Get in Touch</button></span>
                 <button className={currentModeState === 'light' ? styles.ourServicesButtonLight : styles.ourServicesButtonDark}>Our Services</button>
               </div>
 
             </div>
             <div className={styles.headerImage}>
-              <Image src={image} alt="image-alt-text"/>
+            <div className={styles.test}/>
+
+              {/* <Image src={image} alt="image-alt-text"/> */}
             </div>
           </div>
 

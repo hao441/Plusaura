@@ -126,3 +126,187 @@
         width: 40vw;
         height: 60vh
     }
+
+
+/* Large Display i.e monitor */
+@media only screen and (max-width: 5000px) {
+    .contactImage {
+        width: 35vw;
+        height: 40vh;   
+    }
+
+    .contactFormLight {
+        height: 40vh;
+    }
+
+    .contactFormDark {
+        height: 40vh;
+    }
+}
+
+@media only screen and (max-width: 2500px) {
+    .contactImage {
+        width: 35vw;
+        height: 45vh;   
+    }
+
+    .contactFormLight {
+        height: 45vh;
+    }
+
+    .contactFormDark {
+        height: 45vh;
+    }
+}
+
+/* Standard Display i.e laptop*/
+@media only screen and (max-width: 2000px) {
+    .contactImage {
+        width: 40vw;
+        height: 23vh;   
+    }
+}
+
+/* Standard Display i.e laptop*/
+@media only screen and (max-width: 1500px) {
+    .contactImage {
+        width: 35vw;
+        height: 60vh;   
+        margin-right: 1vw;
+    }
+
+    .contactFormLight {
+        height: 45vh;
+        padding-bottom: 65vh;
+    }
+
+    .contactFormDark {
+        height: 45vh;
+        padding-bottom: 65vh;
+    }
+}
+
+/* Tall Display i.e Monitor in Portrait Mode */
+@media only screen and (max-width: 1500px) and (min-height: 2000px) {
+    .contactImage {
+        width: 45vw;
+        height: 50vh;   
+    }
+}
+
+/* Mobile Display */
+@media only screen and (max-width: 1050px) {
+    .contactUsGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        max-height: 100vh;
+        justify-items: center;
+        margin-bottom: -7vh;
+        padding: 0;
+    }
+
+    .contactImage {
+        width: 87vw;
+        height: 50vh;
+        margin-bottom: 3vh; 
+    }
+
+    .contactFormLight {
+        padding-top: 3vh;
+        margin-bottom: 50vh;
+    }
+
+    .contactFormDark {
+        padding-top: 3vh;
+        margin-bottom: 50vh;
+    }
+}
+
+/* Small Mobile Display */
+@media only screen and (max-width: 850px) {
+    .chooseSubTitle {
+        margin-bottom: 2vh;
+    }
+
+    .contactUsGrid {
+        margin-bottom: 7vh;
+    }
+}
+
+/* Very Small Mobile Display */
+@media only screen and (max-width: 500px) {
+    .contactUsGrid {
+        margin-bottom: 53vh;
+    }
+
+    .contactFormDark {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        max-width: 97%;
+        margin-top: 5vh;
+        margin-left: 0;
+        justify-self: start;
+        align-self: flex-start;
+        padding: 0;
+        padding-top: 50px;
+        padding-bottom: 575px;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .contactFormLight {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        max-width: 97%;
+        margin-top: 5vh;
+        margin-left: 0;
+        justify-self: start;
+        align-self: flex-start;
+        padding: 0;
+        padding-top: 50px;
+        padding-bottom: 575px;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .contactFormSubtitle {
+        margin-bottom: 10px;
+    }
+
+
+}
+
+/* Tiny Mobile Display */
+@media only screen and (max-width: 400px) {
+    
+}
+
+/* Dumb Phone Mobile Display */
+@media only screen and (max-width: 370px) {
+}
+
+/* Smallest Mobile Display */
+@media only screen and (max-width: 350px) {
+    .contactUsGrid {
+        margin-bottom: 80vh;
+    }
+}
+
+/* Mobile Landscape Display */
+@media only screen and (min-width: 700px) and (max-height: 700px) {
+    .contactImage {
+        width: 50vw;
+        height: 110vh;   
+    }
+
+   
+}

@@ -302,7 +302,18 @@ a {
   body {
     margin: 0;
     padding:0;
-    margin: 1.5vh 3vw 1.5px 3vw
+  }
+
+  .none {
+    
+    display: none;
+    background-color: black;
+  }
+
+  .black {
+    background-color: black;
+    width: 100vw;
+    height: 90vh;
   }
 
   .get-in-touch-box-light {
@@ -352,10 +363,23 @@ a {
     .header-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: 1fr;
       align-items: center;
       margin-top: 12px;
+      margin-left: 10vw;
     }
+
+
+
+    .hamburger-lines {
+      margin-right: -45px;
+      cursor: pointer;
+    }
+
+    .nav-container .checkbox {
+      margin-right: -45px;
+    }
+
     
     .container {
       margin: auto;
@@ -371,7 +395,7 @@ a {
     
     .navbar .menu-items {
       display: flex;
-      
+      width: 100vw;
     }
     
     .navbar .nav-container li {
@@ -447,7 +471,7 @@ a {
     }
     
     .navbar .menu-items {
-      padding-top: 120px;
+      padding-top: 50px;
       background-color: #18151B;
       transform: translate(-300%);
       display: flex;
@@ -458,7 +482,7 @@ a {
       width: 100vw;
       display: absolute;
       left: 0;
-
+      margin-top: -50px;
     }
     
     .navbar .menu-items li {
