@@ -31,6 +31,7 @@
     font-weight: 300;
     color: #9C9C9C;
     width: 50%;
+    margin-top: 20px;
 }
 
 .linkSection {
@@ -50,6 +51,7 @@
     font-size: 16px;
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
+    text-align: center;
 }
 
 
@@ -61,6 +63,7 @@
     font-size: 16px;
     background: #28262A;
     border: 1px solid #383639;
+    text-align: center;
 }
 
 .subscribeButton {
@@ -104,17 +107,25 @@
     justify-self: end;
 }
 
-@media only screen and (max-height: 1050px) {
+@media only screen and (max-width: 1050px) {
+
+    .logo {
+        margin-top: 20px;
+    }
+
+    .footerBoxLight {
+        padding: 0;
+    }
+
+    .footerBoxDark {
+        padding: 0;
+    }
+
     .footerGrid {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1.5fr;
-        row-gap: 50px;
-    }
-
-    .logo {
-        margin-left: 15px;
-        margin-bottom: 15px;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 20px;
     }
 
     .logoText {
@@ -129,15 +140,101 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-        margin-right: 150px;
         text-align: center;
+    }
+
+    .hr {
+        margin-bottom: 30px;
     }
 
     .conditionSection {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+        margin: 0;
+        padding: 0;
+        
     }
+
+    .empty {
+        display: none;
+    }
+
+    .termsPolicy {
+        display: grid;
+        width: auto;
+        grid-template-columns:  1fr;
+        grid-template-rows: 1fr fr;
+        justify-items: center;
+        justify-self: center;
+    }
+
+    .subscribeSection {
+        justify-self: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .subscribeInputSection {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .logoSection {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        justify-self: center;
+    }
+
+    .subscribeInputLight {
+        width: auto;
+        margin: auto;
+        text-align: center;
+        margin: auto;
+        justify-items: center;
+    }
+
+    .subscribeInputDark {
+        width: auto;
+        margin: auto;
+        text-align: center;
+        margin: auto;
+        justify-items: center;
+    }
+
+    .sectionHeader {
+        text-align: center;
+    }
+
+    .sectionText {
+        text-align: center;
+    }
+
+    .subscribeButton {
+        width: 50vw;
+        height: 47px;
+        border-style: none;
+        color: white;
+        font-size: 16px;
+        background: linear-gradient(229.76deg, #00C2CB -61.91%, #00C2CB 34.74%, #2A45A3 97.61%);
+        margin: 0;
+        padding: 0;
+    }
+
+    .footerGrid {
+        justify-items: center;
+    }
+
+    .conditionsText {
+        text-align: center;
+    }
+
 
 }
 

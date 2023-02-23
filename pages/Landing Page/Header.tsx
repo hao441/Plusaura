@@ -21,7 +21,7 @@ export default function HeaderSection({ currentMobileState, newMobileState, curr
   const [mobileMenu, setMobileMenu] = useState(false);
 
   const handleMobile = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
+
     return !currentMobileState ? newMobileState(true) : newMobileState(false);
   }
 
@@ -60,10 +60,10 @@ export default function HeaderSection({ currentMobileState, newMobileState, curr
                 <div className="navbar">
                   <div className="container nav-container">
                     
-                    <input className="checkbox" type="checkbox" name="" id="" />
+                    <input onClick={handleMobile} className="checkbox" type="checkbox" name="" id="" />
                       <div className='header-grid'>
                         <div className={styles.image}>
-                          <Image className={styles.logo} src={logo} alt="image" height={31.38} width={105.4}/>
+                          <Image className={styles.logo} src={currentModeState === 'light' ? logoDark : logo} alt="image" height={31.38} width={105.4}/>
                         </div>
                         <div className={styles.navbar}>
                           <a className="navbar-item active" href="#home">Home</a>
@@ -75,18 +75,19 @@ export default function HeaderSection({ currentMobileState, newMobileState, curr
                         </div>
                         
                         <div className={styles.darkTouch}>
-                          <Image className={styles.dlMode} src={darkMode} alt="light/dark mode"/>
+                        <Image className='dl-mode' src={currentModeState === 'light' ? lightMode : darkMode} alt="light/dark mode" onClick={handleMode}/>
                           <button className={styles.headerButton}>Get in Touch</button>
                         </div>
                       </div>
-                      <div className="hamburger-lines" onClick={() => {currentMobileState ? setMobileMenu(false) : setMobileMenu(true)}}>
-                        <span className="line line1"></span>
-                        <span className="line line2"></span>
-                        <span className="line line3"></span>
+                      <div className="hamburger-lines">
+                        <span className={currentModeState === 'light' ? "line-light line1" : 'line-dark line1'}></span>
+                        <span className={currentModeState === 'light' ? "line-light line2" : 'line-dark line2'}></span>
+                        <span className={currentModeState === 'light' ? "line-light line3" : 'line-dark line3'}></span>
                       </div> 
 
                       <h1>{currentMobileState}</h1>
-                    <div className="menu-items">
+                    <div className={currentModeState === 'light' ? 'menu-items-light' : 'menu-items-dark'}>
+                    <Image className={styles.logo} src={currentModeState === 'light' ? logoDark : logo} alt="image" height={31.38} width={105.4}/>
                       <li><a href="#">Home</a></li>
                       <hr className='menu-hr'/>
                       <li><a href="#">about</a></li>

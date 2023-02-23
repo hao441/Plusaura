@@ -135,7 +135,7 @@
         .testimonialBoxDark {
             margin-top: 50px;
             height: 400px;
-            margin-bottom: -150px;
+            margin-bottom: 0px;
         }
     }
 

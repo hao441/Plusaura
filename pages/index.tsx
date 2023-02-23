@@ -23,6 +23,8 @@ export default function Home() {
   const [mode, setMode] = useState('dark');
   const [contactMenu, setContactMenu] = useState(false)
 
+
+
   return (
     <>
     <div className={mode === 'dark' ? 'dark' : 'light'}>
@@ -43,7 +45,7 @@ export default function Home() {
           currentContactState={contactMenu}
           newContactState={setContactMenu}
         />
-        <div className='black'></div>
+        <div className={ mobileMenu && mode === 'light' ? 'white' : mobileMenu && mode === 'dark' ? 'black' : ''}></div>
         <div className={mobileMenu ? 'none' : ''}>
         <HomePageSection 
           currentModeState={mode}

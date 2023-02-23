@@ -34,7 +34,7 @@ export default function FooterSection({currentModeState}: ModeState) {
                 <p className={styles.sectionHeader}>Subscribe Newsletter</p>
                 <p className={styles.sectionText}>Newletter Paragraph Text</p>
 
-                <form>
+                <form className={styles.subscribeInputSection}>
                   <input id="subscription-email-field" className={currentModeState === 'light' ? styles.subscribeInputLight : styles.subscribeInputDark} type={"email"} placeholder={'Enter your email address'}/>
                   <button className={styles.subscribeButton}>Subscribe</button>
                 </form> 
@@ -45,9 +45,9 @@ export default function FooterSection({currentModeState}: ModeState) {
 
               <div className={styles.conditionSection}>
                 <div>
-                  <p className={styles.conditionsText}> Copyright 2022 Plusaura ...</p>
+                  <p className={styles.conditionsText}> Copyright 2022 Plusaura</p>
                 </div>
-                <div></div>
+                <div className={styles.empty}></div>
                 <div className={styles.termsPolicy}>
                   <p className={styles.conditionsText}>Terms and Conditions</p>
                   <p className={styles.conditionsText}>Privacy Policy</p>

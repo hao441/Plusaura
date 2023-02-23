@@ -29,7 +29,7 @@ export default function HomePageSection({currentModeState, currentContactState, 
               </div>
 
               <div className={styles.headerText}>
-                <h2>We specialise in turning and bringing ideas into <b>amazing products</b> through next level visual display</h2>
+                <h2 className={styles.headerSubtext}>We specialise in turning and bringing ideas into <b>amazing products</b> through next level visual display</h2>
               </div>
               
               <div className={styles.headerButtons}>
