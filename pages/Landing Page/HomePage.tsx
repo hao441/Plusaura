@@ -25,7 +25,7 @@ export default function HomePageSection({currentModeState, currentContactState, 
             <div className={styles.headerElements}>
 
               <div className={styles.titleText}>
-                <h1>Building <span className={styles.digitalProduct}>Digital Product</span></h1>
+                <h1> <span className={styles.textBuilding}>Building </span><span className={styles.digitalProduct}>Digital Product</span></h1>
               </div>
 
               <div className={styles.headerText}>

@@ -87,8 +87,8 @@ export default function HeaderSection({ currentMobileState, newMobileState, curr
 
                       <h1>{currentMobileState}</h1>
                     <div className={currentModeState === 'light' ? 'menu-items-light' : 'menu-items-dark'}>
-                    <Image className={styles.logo} src={currentModeState === 'light' ? logoDark : logo} alt="image" height={31.38} width={105.4}/>
-                      <li><a href="#">Home</a></li>
+                    <Image className={styles.logoMobile} src={currentModeState === 'light' ? logoDark : logo} alt="image" height={31.38} width={105.4}/>
+                      <li className={styles.mobileA}><a  href="#">Home</a></li>
                       <hr className='menu-hr'/>
                       <li><a href="#">about</a></li>
                       <hr className='menu-hr'/>

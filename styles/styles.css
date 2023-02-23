@@ -557,10 +557,10 @@ a {
     }
 
     .navbar .menu-hr {
-      width: 90%;
-      margin: 0 auto 0 auto;
-      border-width: 0.5px;
-      border-color: #0e2431;
+      width: 80%;
+      margin: 0 auto 30px auto;
+      border-width: 0.8px;
+      border-color: rgba(0,0,0,0.8);
     }
     
     .logo {
@@ -599,13 +599,47 @@ a {
 }
 
 
+@media only screen and (max-width: 400px) {
+    .header {
+      margin-bottom: 5vh;
+  }
+
+  .homepage {
+      margin-bottom: 25vh;
+  }
+
+  .our-services{
+      margin-bottom: 25vh;
+  }
+
+  .why-choose-us {
+      margin-bottom: 25vh;
+  }
+
+  .our-portfolio {
+      margin-bottom: 25vh;
+  }
+
+  .testimonial {
+      margin-bottom: 25vh;
+  }
+
+  .contact-form {
+      margin-bottom: 25vh;
+  }
+
+  .footer {
+      margin-bottom: 25vh;
+  }
+}
+
 @media only screen and (max-width: 350px) {
   .header {
-    margin-bottom: 25vh;
+    margin-bottom: 5vh;
 }
 
 .homepage {
-    margin-bottom: 25vh;
+    margin-bottom: 70vh;
 }
 
 .our-services{
@@ -632,5 +666,7 @@ a {
     margin-bottom: 25vh;
 }
 }
+
+
 
 

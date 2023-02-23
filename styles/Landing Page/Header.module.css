@@ -89,7 +89,12 @@
     }
 
     .logo {
-        margin-left: 10px;
+        margin-left: 40px;
+    }
+
+    .logoMobile {
+        margin-left: 50px;
+        margin-bottom: 50px;
     }
    
 }
