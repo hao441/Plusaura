@@ -27,7 +27,9 @@ export default function Home() {
 
   return (
     <>
+    
     <div className={mode === 'dark' ? 'dark' : 'light'}>
+    <div className='threed'>
       <div className={!contactMenu ? 'pop-off' : 'pop-on'}>
         <PopUp
           currentContactState={contactMenu}
@@ -76,8 +78,9 @@ export default function Home() {
         <FooterSection currentModeState={mode}/>
         {/* <MainSection /> */}
         </div>
-        
+        </div>
       </div>
+      
     </>
   )
 }

@@ -8,19 +8,19 @@
 
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
-    src: url('../assets//neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayRoman.ttf') format('truetype');
+    src: url('../assets/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayRoman.ttf') format('truetype');
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
-    src: url('../assets//neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayMediu.ttf') format('truetype');
+    src: url('../assets/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayMediu.ttf') format('truetype');
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
-    src: url('../assets//neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBold.ttf') format('truetype');
+    src: url('../assets/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBold.ttf') format('truetype');
     font-weight: 700;
 }
 
@@ -37,6 +37,7 @@ body {
 /* Tag Styles */
 .light {
   color: #09050D;
+  background-image: url("../assets/3dSpin.gif");
   background-color: white;
   padding-top: 4vh;
   padding-bottom: 4vh;
@@ -48,6 +49,7 @@ body {
 .dark {
     color: white;
     background-color: #09050D;
+
     padding-top: 4vh;
     padding-bottom: 4vh;
     padding-left: 5vw;
@@ -55,6 +57,13 @@ body {
     transition: background-color 0.5s ease;
 }
 
+.threed {
+  background-image: url("../assets/3dSpin.gif");
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-size: 75%;
+  z-index: 1;
+}
 
 
 .light-text {
