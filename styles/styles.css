@@ -37,7 +37,6 @@ body {
 /* Tag Styles */
 .light {
   color: #09050D;
-  background-image: url("../assets/3dSpin.gif");
   background-color: white;
   padding-top: 4vh;
   padding-bottom: 4vh;
@@ -49,7 +48,12 @@ body {
 .dark {
     color: white;
     background-color: #09050D;
-
+    background-image: url("../assets/animated4.gif");
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    background-size: 50%;
+    background-attachment: fixed;
+    z-index: 1;
     padding-top: 4vh;
     padding-bottom: 4vh;
     padding-left: 5vw;
@@ -58,9 +62,9 @@ body {
 }
 
 .threed {
-  background-image: url("../assets/3dSpin.gif");
+  /* background-image: url("../assets/animated4.gif"); */
   background-repeat: no-repeat;
-  background-position: 50% 0%;
+  background-position: 0% 0%;
   background-size: 75%;
   background-attachment: fixed;
   z-index: 1;

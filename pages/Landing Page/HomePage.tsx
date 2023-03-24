@@ -39,7 +39,7 @@ export default function HomePageSection({currentModeState, currentContactState, 
 
             </div>
             <div className={styles.headerImage}>
-            <div className={styles.test}/>
+            <div className={currentModeState === 'light' ? styles.test : ""}/>
 
               {/* <Image src={image} alt="image-alt-text"/> */}
             </div>

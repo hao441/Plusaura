@@ -78,9 +78,9 @@ export default function Home() {
         <FooterSection currentModeState={mode}/>
         {/* <MainSection /> */}
         </div>
-        </div>
+        
       </div>
-      
+      </div>
     </>
   )
 }
